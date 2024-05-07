@@ -11,14 +11,24 @@ import reactor.core.publisher.Mono;
 public class CryptoController {
     private final BinancePriceService binancePriceService;
 
+    // Constructor of the controller with BinancePriceService parameter
     @Autowired
     public CryptoController(BinancePriceService binancePriceService) {
         this.binancePriceService = binancePriceService;
     }
 
+    // HTTP GET endpoint for retrieving the current price of BTCUSDT
     @GetMapping("/btc-usdt")
     public Mono<String> getCurrentPriceBTCUSDT() {
         String symbol = "BTCUSDT";
+        binancePriceService.getCurrentPrice(symbol);
+        return Mono.just("Current price of " + symbol + " is retrieved successfully.");
+    }
+
+    // HTTP GET endpoint for retrieving the current price of ETHUSDT
+    @GetMapping("/eth-usdt")
+    public Mono<String> getCurrentPriceETHUSDT() {
+        String symbol = "ETHUSDT";
         binancePriceService.getCurrentPrice(symbol);
         return Mono.just("Current price of " + symbol + " is retrieved successfully.");
     }

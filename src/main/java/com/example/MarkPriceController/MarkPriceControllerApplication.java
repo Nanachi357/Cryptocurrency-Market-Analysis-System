@@ -1,33 +1,37 @@
 package com.example.MarkPriceController;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.springframework.boot.SpringApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
+@EnableScheduling
 public class MarkPriceControllerApplication {
 
 	public static void main(String[] args) {
-		// Запуск додатка Spring Boot
-		SpringApplication.run(MarkPriceControllerApplication.class, args);
+		// Running a Spring Boot application
+		SpringApplication app = new SpringApplication(MarkPriceControllerApplication.class);
+		ConfigurableApplicationContext context = app.run(args);
+		BinancePriceService binancePriceService = context.getBean(BinancePriceService.class);
 
-		// Встановлення шляху до драйвера Chrome
-		System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
+		boolean continueChecking = true;
 
-		// Налаштування параметрів браузера Chrome для відкриття у фоновому режимі
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless"); // Використовувати режим без головного вікна
+		while (continueChecking) {
+			// Get input from the user
+			String cryptocurrencyPairs = ConsoleInputHandler.promptUserForCryptocurrencyPairs();
 
-		// Створення екземпляру драйвера Chrome з налаштуваннями
-		WebDriver driver = new ChromeDriver(options);
+			// Split input into individual cryptocurrency pairs
+			String[] pairs = cryptocurrencyPairs.split("\\s+");
 
-		// Відкриття URL
-		driver.get("http://localhost:8080/currentPrice/btc-usdt");
+			// Get the current rate for each cryptocurrency pair
+			for (String pair : pairs) {
+				String currentPrice = binancePriceService.getCurrentPrice(pair);
+				System.out.println("Current price of " + pair + " is: " + currentPrice);
+			}
 
-		// Закриття драйвера після завершення роботи
-		driver.quit();
+			// User request to continue
+			continueChecking = ConsoleInputHandler.promptUserForContinuation();
+		}
 	}
-
 }
