@@ -1,5 +1,7 @@
 package com.example.MarkPriceController;
 
+import com.binance.api.client.domain.market.CandlestickInterval;
+
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -42,5 +44,31 @@ public class ConsoleInputHandler {
         System.out.println("\n Do you want to check another cryptocurrency pair? (Y/N)");
         String continueInput = scanner.nextLine().toUpperCase();
         return continueInput.equals("Y");
+    }
+
+    public static CandlestickInterval promptUserForCandlestickInterval() {
+        System.out.println("Choose candlestick interval:");
+        System.out.println("1 - 1 minute");
+        System.out.println("3 - 3 minutes");
+        System.out.println("5 - 5 minutes");
+        // Додайте інші варіанти за потреби
+
+        int choice = scanner.nextInt();
+        switch (choice) {
+            case 1:
+                return CandlestickInterval.ONE_MINUTE;
+            case 3:
+                return CandlestickInterval.THREE_MINUTES;
+            case 5:
+                return CandlestickInterval.FIVE_MINUTES;
+            default:
+                throw new IllegalArgumentException("Invalid choice");
+        }
+    }
+
+    public static Long promptUserForTime(String prompt) {
+        System.out.println(prompt);
+        System.out.println("Enter time in milliseconds:");
+        return scanner.nextLong();
     }
 }
