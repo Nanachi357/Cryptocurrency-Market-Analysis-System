@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candlestick Data</title>
+</head>
+<body>
+<h1>Candlestick Data for <span th:text="${symbol}">Symbol</span></h1>
+<p>Interval: <span th:text="${interval}">Interval</span></p>
+<p>Start Time: <span th:text="${startTime}">Start Time</span></p>
+<p>End Time: <span th:text="${endTime}">End Time</span></p>
+<p>Limit: <span th:text="${limit}">Limit</span></p>
+
+<table>
+    <thead>
+    <tr>
+        <th>Open Time</th>
+        <th>Open</th>
+        <th>High</th>
+        <th>Low</th>
+        <th>Close</th>
+        <th>Volume</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Loop through candlestick data and display each row -->
+    <tr th:each="candlestick : ${candlestickData}">
+        <td th:text="${candlestick.openTime}"></td>
+        <td th:text="${candlestick.open}"></td>
+        <td th:text="${candlestick.high}"></td>
+        <td th:text="${candlestick.low}"></td>
+        <td th:text="${candlestick.close}"></td>
+        <td th:text="${candlestick.volume}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

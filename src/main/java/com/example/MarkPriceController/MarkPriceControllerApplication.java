@@ -1,121 +1,101 @@
 package com.example.MarkPriceController;
 
-import com.binance.api.client.domain.market.Candlestick;
-import com.binance.api.client.domain.market.CandlestickInterval;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.boot.SpringApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.util.List;
-import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @SpringBootApplication
 @EnableScheduling
 public class MarkPriceControllerApplication {
+	private static final Logger logger = Logger.getLogger(MarkPriceControllerApplication.class.getName());
 
 	public static void main(String[] args) {
-		// Running a Spring Boot application
-		SpringApplication app = new SpringApplication(MarkPriceControllerApplication.class);
-		ConfigurableApplicationContext context = app.run(args);
-		BinancePriceService binancePriceService = context.getBean(BinancePriceService.class);
-		BinanceHistoricalDataService historicalDataService = context.getBean(BinanceHistoricalDataService.class);
-		Scanner scanner = new Scanner(System.in);
+		SpringApplication.run(MarkPriceControllerApplication.class, args);
+		// Open browser window with index.html page
+		openBrowser("http://localhost:8085/");
+	}
 
+	// Bean for interacting with Binance web service for historical data
+	@Bean
+	public BinanceHistoricalDataService binanceHistoricalDataService() {
+		return new BinanceHistoricalDataService();
+	}
 
-		boolean continueChecking = true;
+	// Bean for interacting with Binance web service for current prices
+	@Bean
+	public BinancePriceService binancePriceService() {
+		return new BinancePriceService();
+	}
 
-		while (continueChecking) {
-			// Prompt the user for choice
-			System.out.println("Choose an option:");
-			System.out.println("1. Check current cryptocurrency prices");
-			System.out.println("2. Get historical candlestick data");
-			System.out.print("Enter your choice (1 or 2): ");
-			int choice = scanner.nextInt();
-			scanner.nextLine(); // Consume newline character
-
-			switch (choice) {
-				case 1 -> {
-					// Get input from the user
-					String cryptocurrencyPairs = ConsoleInputHandler.promptUserForCryptocurrencyPairs();
-					// Split input into individual cryptocurrency pairs
-					String[] pairs = cryptocurrencyPairs.split("\\s+");
-					// Get the current rate for each cryptocurrency pair
-					for (String pair : pairs) {
-						String currentPrice = binancePriceService.getCurrentPrice(pair);
-						System.out.println("Current price of " + pair + " is: " + currentPrice);
-					}
-				}
-				case 2 -> {
-					// Get input for historical candlestick data
-					System.out.print("Enter symbol: ");
-					String symbol = scanner.nextLine();
-					System.out.print("""
-							                     
-							Available intervals:\s
-							ONE_MINUTE
-							THREE_MINUTES
-							FIVE_MINUTES
-							FIFTEEN_MINUTES
-							HALF_HOURLY
-							HOURLY
-							TWO_HOURLY
-							FOUR_HOURLY
-							SIX_HOURLY
-							EIGHT_HOURLY
-							TWELVE_HOURLY
-							DAILY
-							THREE_DAILY
-							WEEKLY
-							MONTHLY
-							Enter interval:""");
-					String intervalString = scanner.nextLine();
-					CandlestickInterval interval = CandlestickInterval.valueOf(intervalString);
-					LocalDateTime startDateTime = promptForDateTime("Enter start");
-					Long startTime = convertToEpochMillis(startDateTime);
-					LocalDateTime endDateTime = promptForDateTime("Enter end");
-					Long endTime = convertToEpochMillis(endDateTime);
-					System.out.print("Enter limit (optional, default 500, max 1500): ");
-					Integer limit = scanner.nextInt();
-
-					// Retrieve and display historical candlestick data
-					System.out.println("Retrieving historical candlestick data...");
-					List<Candlestick> candlestickData = historicalDataService.getHistoricalCandlestickData(symbol, interval, startTime, endTime, limit);
-					for (Candlestick candlestick : candlestickData) {
-						System.out.println(candlestick);
-					}
-				}
-				default -> System.out.println("Invalid choice! Please enter 1 or 2.");
+	// Adding a controller for the error page
+	@Bean
+	public WebMvcConfigurer webMvcConfigurer() {
+		return new WebMvcConfigurer() {
+			@Override
+			public void addViewControllers(@NotNull ViewControllerRegistry registry) {
+				registry.addViewController("/error").setViewName("error");
 			}
 
-			// User request to continue
-			System.out.println("Do you want to continue? (Y/N)");
-			String continueInput = scanner.next().toUpperCase();
-			continueChecking = continueInput.equals("Y");
-			scanner.nextLine(); // Consume newline character
+		};
+	}
+
+	// Creating a RestTemplate bean
+	@Bean
+	public RestTemplate restTemplate() {
+		return new RestTemplate();
+	}
+
+	// Method to open the browser with the given URL
+	private static void openBrowser(String url) {
+		String os = System.getProperty("os.name").toLowerCase();
+		Runtime rt = Runtime.getRuntime();
+
+		try {
+			if (os.contains("win")) {
+				// Windows
+				rt.exec("rundll32 url.dll,FileProtocolHandler " + url);
+			} else if (os.contains("mac")) {
+				// MacOS
+				rt.exec("open " + url);
+			} else if (os.contains("nix") || os.contains("nux")) {
+				// Unix/Linux
+				String[] browsers = {"xdg-open", "google-chrome", "firefox", "mozilla", "konqueror",
+						"netscape", "opera", "links", "lynx"};
+				for (String browser : browsers) {
+					if (rt.exec(new String[] {"which", browser}).waitFor() == 0) {
+						rt.exec(new String[] {browser, url});
+						break;
+					}
+				}
+			} else {
+				logger.log(Level.WARNING, "Cannot open browser on this platform.");
+			}
+		} catch (Exception e) {
+			logger.log(Level.SEVERE, "An error occurred while opening the browser", e);
 		}
-		scanner.close();
 	}
-	private static LocalDateTime promptForDateTime(String prompt) {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println(prompt + " time (optional):");
-		System.out.print("Enter year: ");
-		int year = scanner.nextInt();
-		System.out.print("Enter month: ");
-		int month = scanner.nextInt();
-		System.out.print("Enter day: ");
-		int day = scanner.nextInt();
-		System.out.print("Enter hour: ");
-		int hour = scanner.nextInt();
-		System.out.print("Enter minute: ");
-		int minute = scanner.nextInt();
-		System.out.print("Enter second: ");
-		int second = scanner.nextInt();
-		return LocalDateTime.of(year, month, day, hour, minute, second);
+
+	// Configuration class for MVC
+	@Configuration
+	public static class MvcConfig implements WebMvcConfigurer {
+
+		@Override
+		public void addResourceHandlers(ResourceHandlerRegistry registry) {
+			registry
+					.addResourceHandler("/**")
+					.addResourceLocations("classpath:/templates/");
+		}
 	}
-	private static long convertToEpochMillis(LocalDateTime localDateTime) {
-		return localDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
-	}
+
+
 }

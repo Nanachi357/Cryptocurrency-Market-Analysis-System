@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+<h1>Welcome to Mark Price Controller</h1>
+<p>This is the home page.</p>
+
+<h2>Get Current Price</h2>
+<form action="/price" method="get">
+    <label for="priceSymbol">Symbol:</label>
+    <input type="text" id="priceSymbol" name="symbol" required>
+    <button type="submit">Get Price</button>
+</form>
+
+<h2>Get Candlestick Data</h2>
+<form action="/candlestick" method="get">
+    <label for="candlestickSymbol">Symbol:</label>
+    <input type="text" id="candlestickSymbol" name="symbol" required><br>
+    <label for="interval">Interval:</label>
+    <select id="interval" name="interval" required>
+        <option th:each="interval : ${intervals}" th:value="${interval}" th:text="${interval}">Interval</option>
+    </select><br>
+    <label for="candlestickStartDate">Start Date:</label>
+    <input type="date" id="candlestickStartDate" name="startDate"><br>
+    <label for="candlestickStartTime">Start Time:</label>
+    <input type="time" id="candlestickStartTime" name="startTime"><br>
+    <label for="candlestickEndDate">End Date:</label>
+    <input type="date" id="candlestickEndDate" name="endDate"><br>
+    <label for="candlestickEndTime">End Time:</label>
+    <input type="time" id="candlestickEndTime" name="endTime"><br>
+    <label for="limit">Limit (Default: <span th:text="${defaultLimit}"></span>, Max: <span th:text="${maxLimit}"></span>):</label>
+    <input type="number" id="limit" name="limit" min="1" th:max="${maxLimit}" th:value="${defaultLimit}"><br>
+    <button type="submit">Get Candlestick Data</button>
+</form>
+</body>
+</html>
