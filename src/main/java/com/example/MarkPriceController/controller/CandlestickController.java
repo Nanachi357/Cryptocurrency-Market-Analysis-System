@@ -1,8 +1,8 @@
-package com.example.MarkPriceController;
+package com.example.MarkPriceController.controller;
 
 import com.binance.api.client.domain.market.Candlestick;
 import com.binance.api.client.domain.market.CandlestickInterval;
-import com.binance.api.client.domain.market.TickerPrice;
+import com.example.MarkPriceController.service.BinanceHistoricalDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,33 +13,16 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.ZoneId;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Controller
-public class WebController {
+public class CandlestickController {
 
     private final BinanceHistoricalDataService historicalDataService;
-    private final BinancePriceService priceService;
 
-    // Constructor injection of services
     @Autowired
-    public WebController(BinanceHistoricalDataService historicalDataService, BinancePriceService priceService) {
+    public CandlestickController(BinanceHistoricalDataService historicalDataService) {
         this.historicalDataService = historicalDataService;
-        this.priceService = priceService;
-    }
-
-    // Handles the root URL, populates the model with candlestick intervals
-    @GetMapping("/")
-    public String index(Model model) {
-        List<String> intervals = Arrays.stream(CandlestickInterval.values())
-                .map(Enum::name)
-                .collect(Collectors.toList());
-        model.addAttribute("intervals", intervals);
-        model.addAttribute("defaultLimit", 500);
-        model.addAttribute("maxLimit", 1500);
-        return "index";
     }
 
     // Handles requests for candlestick data, converting date and time parameters to timestamps
@@ -66,15 +49,6 @@ public class WebController {
         return "candlestick";
     }
 
-    // Handles requests for current price data
-    @GetMapping("/price")
-    public String getCurrentPrice(@RequestParam String symbol, Model model) {
-        TickerPrice price = priceService.getCurrentPrice(symbol);
-        model.addAttribute("symbol", symbol);
-        model.addAttribute("price", price.getPrice());
-        return "price";
-    }
-
     // Converts date and time strings to a timestamp in milliseconds
     private Long convertToTimestamp(String date, String time) {
         if (date == null || date.isEmpty()) {
@@ -85,4 +59,5 @@ public class WebController {
         LocalDateTime localDateTime = LocalDateTime.of(localDate, localTime);
         return localDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
     }
+
 }

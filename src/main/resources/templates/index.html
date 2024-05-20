@@ -36,5 +36,14 @@
     <input type="number" id="limit" name="limit" min="1" th:max="${maxLimit}" th:value="${defaultLimit}"><br>
     <button type="submit">Get Candlestick Data</button>
 </form>
+
+<h2>Get Order Book</h2>
+<form action="/orderBook" method="get">
+    <label for="orderBookSymbol">Symbol:</label>
+    <input type="text" id="orderBookSymbol" name="symbol" required><br>
+    <label for="orderBookLimit">Limit:</label>
+    <input type="number" id="orderBookLimit" name="limit" min="1" max="1000" value="100"><br>
+    <button type="submit">Get Order Book</button>
+</form>
 </body>
 </html>

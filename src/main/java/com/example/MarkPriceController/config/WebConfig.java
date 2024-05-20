@@ -1,4 +1,4 @@
-package com.example.MarkPriceController;
+package com.example.MarkPriceController.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

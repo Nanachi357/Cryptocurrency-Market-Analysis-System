@@ -1,5 +1,7 @@
 package com.example.MarkPriceController;
 
+import com.example.MarkPriceController.service.BinanceHistoricalDataService;
+import com.example.MarkPriceController.service.BinancePriceService;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Book</title>
+</head>
+<body>
+<h1>Order Book for <span th:text="${symbol}"></span></h1>
+
+<h2>Last Update ID: <span th:text="${orderBook.lastUpdateId}"></span></h2>
+
+<h3>Bids:</h3>
+<ul>
+    <li th:each="bid : ${orderBook.bids}">
+        <span th:text="${bid.price}"></span> - <span th:text="${bid.qty}"></span>
+    </li>
+</ul>
+
+<h3>Asks:</h3>
+<ul>
+    <li th:each="ask : ${orderBook.asks}">
+        <span th:text="${ask.price}"></span> - <span th:text="${ask.qty}"></span>
+    </li>
+</ul>
+</body>
+</html>
