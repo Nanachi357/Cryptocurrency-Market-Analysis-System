@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Historical RSI</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+<div id="chart" style="width: 80%; height: 600px; margin: auto;"></div>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    const rsiValues = /*[[${rsiValues}]]*/ [];
+    const labels = /*[[${dates}]]*/ [];
+    console.log("RSI Values from server:", rsiValues);
+    console.log("Dates from server:", labels);
+
+    // Побудова графіка за допомогою Plotly
+    const trace = {
+        x: labels,
+        y: rsiValues,
+        type: 'scatter',
+        mode: 'lines',
+        line: {color: 'blue'}
+    };
+
+    const layout = {
+        title: 'Historical RSI',
+        xaxis: {
+            title: 'Date',
+            type: 'date'
+        },
+        yaxis: {
+            title: 'RSI'
+        }
+    };
+
+    Plotly.newPlot('chart', [trace], layout);
+    /*]]>*/
+</script>
+</body>
+</html>
