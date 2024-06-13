@@ -1,7 +1,6 @@
 package com.example.MarkPriceController.controller;
 
 import com.binance.api.client.domain.market.Candlestick;
-import com.binance.api.client.domain.market.CandlestickInterval;
 import com.example.MarkPriceController.service.BinanceHistoricalDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,7 +24,19 @@ public class CandlestickController {
         this.historicalDataService = historicalDataService;
     }
 
-    // Handles requests for candlestick data, converting date and time parameters to timestamps
+    /**
+     * Handles GET requests for candlestick data, converting date and time parameters to timestamps.
+     *
+     * @param symbol the trading symbol (e.g., BTCUSDT)
+     * @param interval the candlestick interval (e.g., 1m, 1h)
+     * @param startDate the start date in the format yyyy-MM-dd (optional)
+     * @param startTime the start time in the format HH:mm (optional)
+     * @param endDate the end date in the format yyyy-MM-dd (optional)
+     * @param endTime the end time in the format HH:mm (optional)
+     * @param limit the maximum number of candlesticks to retrieve (default is 500)
+     * @param model the model to pass attributes to the view
+     * @return the name of the view to render
+     */
     @GetMapping("/candlestick")
     public String getCandlestickData(@RequestParam String symbol,
                                      @RequestParam String interval,
@@ -35,17 +46,23 @@ public class CandlestickController {
                                      @RequestParam(required = false) String endTime,
                                      @RequestParam(required = false, defaultValue = "500") Integer limit,
                                      Model model) {
-        CandlestickInterval candlestickInterval = CandlestickInterval.valueOf(interval);
+
+        // Convert date and time parameters to timestamps
         Long startTimestamp = convertToTimestamp(startDate, startTime);
         Long endTimestamp = convertToTimestamp(endDate, endTime);
-        List<Candlestick> candlestickData = historicalDataService.getHistoricalCandlestickData(symbol, candlestickInterval, startTimestamp, endTimestamp, limit);
 
+        // Retrieve historical candlestick data
+        List<Candlestick> candlestickData = historicalDataService.getHistoricalCandlestickData(symbol, interval, startTimestamp, endTimestamp);
+
+        // Add attributes to the model
         model.addAttribute("symbol", symbol);
         model.addAttribute("interval", interval);
         model.addAttribute("startTime", startTimestamp);
         model.addAttribute("endTime", endTimestamp);
         model.addAttribute("limit", limit);
         model.addAttribute("candlestickData", candlestickData);
+
+        // Return the view name
         return "candlestick";
     }
 
@@ -54,9 +71,15 @@ public class CandlestickController {
         if (date == null || date.isEmpty()) {
             return null;
         }
+
+        // Parse the date and time
         LocalDate localDate = LocalDate.parse(date);
         LocalTime localTime = (time == null || time.isEmpty()) ? LocalTime.MIDNIGHT : LocalTime.parse(time);
+
+        // Combine date and time into a LocalDateTime
         LocalDateTime localDateTime = LocalDateTime.of(localDate, localTime);
+
+        // Convert LocalDateTime to timestamp in milliseconds
         return localDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
     }
 

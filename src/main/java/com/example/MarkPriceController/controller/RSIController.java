@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDate;
+import java.time.ZoneId;
 
 @Controller
 public class RSIController {
@@ -26,25 +27,46 @@ public class RSIController {
 
     // Endpoint to handle the form submission and fetch the RSI data
     @GetMapping("/historical-rsi")
-    public String getRSIData(@RequestParam String symbol,
-                             @RequestParam String interval,
-                             @RequestParam int period,
-                             @RequestParam(required = false) LocalDate startDate,
-                             @RequestParam(required = false) LocalDate endDate,
-                             Model model) {
-        if (startDate == null) {
-            startDate = LocalDate.now().minusDays(30);
-        }
-        if (endDate == null) {
-            endDate = LocalDate.now();
-        }
+    public String getRSIData(
+            @RequestParam(required = false) String symbol,
+            @RequestParam(required = false) String interval,
+            @RequestParam(required = false) LocalDate startDate,
+            @RequestParam(required = false) LocalDate endDate,
+            @RequestParam(required = false) Integer period,
+            Model model) {
+        try {
+            // Default to 30 days ago if startDate is not provided
+            if (startDate == null) {
+                startDate = LocalDate.now().minusDays(30);
+            }
 
-        // Fetch RSI data using the service
-        RSIData rsiData = rsiService.getRSIData(symbol, interval, period, startDate, endDate);
-        // Add RSI data to the model to be used in the view
-        model.addAttribute("dates", rsiData.getDates());
-        model.addAttribute("rsiValues", rsiData.getRsiValues());
+            // Default to today if endDate is not provided
+            if (endDate == null) {
+                endDate = LocalDate.now();
+            }
 
+            // Default period to 14 if not provided
+            if (period == null) {
+                period = 14;
+            }
+
+            symbol = symbol.toUpperCase();
+            // Convert start and end dates to timestamps in milliseconds
+            long startTime = startDate.atStartOfDay(ZoneId.systemDefault()).toEpochSecond() * 1000;
+            long endTime = endDate.atStartOfDay(ZoneId.systemDefault()).toEpochSecond() * 1000;
+
+            // Fetch RSI data using the RSIService
+            RSIData rsiData = rsiService.getRSIData(symbol, interval, startTime, endTime, period);
+
+
+            // Add RSI data to the model
+            model.addAttribute("rsiValues", rsiData.getRsiValues());
+            model.addAttribute("dates", rsiData.getDates());
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            model.addAttribute("error", "Error calculating RSI data: " + e.getMessage());
+        }
         return "historical-rsi";
     }
 }

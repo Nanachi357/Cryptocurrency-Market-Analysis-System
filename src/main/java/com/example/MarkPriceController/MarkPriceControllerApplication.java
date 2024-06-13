@@ -2,6 +2,7 @@ package com.example.MarkPriceController;
 
 import com.example.MarkPriceController.service.BinanceHistoricalDataService;
 import com.example.MarkPriceController.service.BinancePriceService;
+import com.example.MarkPriceController.service.CandlestickDataService;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -29,8 +30,8 @@ public class MarkPriceControllerApplication {
 
 	// Bean for interacting with Binance web service for historical data
 	@Bean
-	public BinanceHistoricalDataService binanceHistoricalDataService() {
-		return new BinanceHistoricalDataService();
+	public BinanceHistoricalDataService binanceHistoricalDataService(CandlestickDataService candlestickDataService) {
+		return new BinanceHistoricalDataService(candlestickDataService);
 	}
 
 	// Bean for interacting with Binance web service for current prices
