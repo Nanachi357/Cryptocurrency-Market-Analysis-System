@@ -14,6 +14,7 @@ public interface CandlestickRepository extends JpaRepository<CandlestickEntity, 
     List<CandlestickEntity> findBySymbolAndOpenTimeBetweenAndInterval(String symbol, LocalDateTime startTime, LocalDateTime endTime, String interval);
 
     boolean existsBySymbolAndOpenTimeBetween(String symbol, LocalDateTime openTime, LocalDateTime endTime);
+
     @Query("SELECT COUNT(c) > 0 FROM CandlestickEntity c WHERE c.symbol = :symbol AND c.openTime = :openTime AND c.closeTime = :closeTime AND c.interval = :interval")
     boolean existsBySymbolAndOpenTimeAndCloseTimeAndInterval(
             @Param("symbol") String symbol,

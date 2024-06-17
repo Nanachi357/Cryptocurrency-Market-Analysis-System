@@ -2,6 +2,8 @@ package com.example.MarkPriceController.controller;
 
 import com.binance.api.client.domain.market.Candlestick;
 import com.example.MarkPriceController.service.BinanceHistoricalDataService;
+import com.example.MarkPriceController.util.CandlestickWrapper;
+import com.example.MarkPriceController.util.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,10 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.ZoneId;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 public class CandlestickController {
@@ -24,63 +24,52 @@ public class CandlestickController {
         this.historicalDataService = historicalDataService;
     }
 
-    /**
-     * Handles GET requests for candlestick data, converting date and time parameters to timestamps.
-     *
-     * @param symbol the trading symbol (e.g., BTCUSDT)
-     * @param interval the candlestick interval (e.g., 1m, 1h)
-     * @param startDate the start date in the format yyyy-MM-dd (optional)
-     * @param startTime the start time in the format HH:mm (optional)
-     * @param endDate the end date in the format yyyy-MM-dd (optional)
-     * @param endTime the end time in the format HH:mm (optional)
-     * @param limit the maximum number of candlesticks to retrieve (default is 500)
-     * @param model the model to pass attributes to the view
-     * @return the name of the view to render
-     */
-    @GetMapping("/candlestick")
-    public String getCandlestickData(@RequestParam String symbol,
-                                     @RequestParam String interval,
-                                     @RequestParam(required = false) String startDate,
-                                     @RequestParam(required = false) String startTime,
-                                     @RequestParam(required = false) String endDate,
-                                     @RequestParam(required = false) String endTime,
-                                     @RequestParam(required = false, defaultValue = "500") Integer limit,
-                                     Model model) {
-
-        // Convert date and time parameters to timestamps
-        Long startTimestamp = convertToTimestamp(startDate, startTime);
-        Long endTimestamp = convertToTimestamp(endDate, endTime);
-
-        // Retrieve historical candlestick data
-        List<Candlestick> candlestickData = historicalDataService.getHistoricalCandlestickData(symbol, interval, startTimestamp, endTimestamp);
-
-        // Add attributes to the model
-        model.addAttribute("symbol", symbol);
-        model.addAttribute("interval", interval);
-        model.addAttribute("startTime", startTimestamp);
-        model.addAttribute("endTime", endTimestamp);
-        model.addAttribute("limit", limit);
-        model.addAttribute("candlestickData", candlestickData);
-
-        // Return the view name
-        return "candlestick";
+    // Endpoint to display the candlestick chart form
+    @GetMapping("/candlestick-chart-form")
+    public String getCandlestickChartForm() {
+        return "candlestick-chart-form";
     }
 
-    // Converts date and time strings to a timestamp in milliseconds
-    private Long convertToTimestamp(String date, String time) {
-        if (date == null || date.isEmpty()) {
-            return null;
+    // Endpoint to handle the form submission and fetch the candlestick data
+    @GetMapping("/candlestick-chart")
+    public String getCandlestickChartPage(@RequestParam String symbol,
+                                          @RequestParam String interval,
+                                          @RequestParam(required = false) LocalDate startDate,
+                                          @RequestParam(required = false) String startTime,
+                                          @RequestParam(required = false) LocalDate endDate,
+                                          @RequestParam(required = false) String endTime,
+                                          Model model) {
+        // Default to 30 days ago if startDate is not provided
+        if (startDate == null) {
+            startDate = LocalDate.now().minusDays(30);
         }
 
-        // Parse the date and time
-        LocalDate localDate = LocalDate.parse(date);
-        LocalTime localTime = (time == null || time.isEmpty()) ? LocalTime.MIDNIGHT : LocalTime.parse(time);
+        // Default to today if endDate is not provided
+        if (endDate == null) {
+            endDate = LocalDate.now();
+        }
 
-        // Combine date and time into a LocalDateTime
-        LocalDateTime localDateTime = LocalDateTime.of(localDate, localTime);
+        symbol = symbol.toUpperCase();
 
-        // Convert LocalDateTime to timestamp in milliseconds
-        return localDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
+        // Convert startDate and endDate with startTime and endTime to timestamps
+        Long startTimestamp = DateUtils.convertToTimestamp(startDate.toString(), startTime);
+        Long endTimestamp = DateUtils.convertToTimestamp(endDate.toString(), endTime);
+
+        // Fetch historical candlestick data from the service
+        List<Candlestick> candlestickData = historicalDataService.getHistoricalCandlestickData(symbol, interval, startTimestamp, endTimestamp);
+
+        // Convert candlestick data to wrappers for easier handling in the view
+        List<CandlestickWrapper> candlestickWrappers = (candlestickData != null) ?
+                candlestickData.stream().map(CandlestickWrapper::new).collect(Collectors.toList()) :
+                List.of();
+
+        // Add attributes to the model for the view
+        model.addAttribute("symbol", symbol);
+        model.addAttribute("interval", interval);
+        model.addAttribute("startTimestamp", startTimestamp);
+        model.addAttribute("endTimestamp", endTimestamp);
+        model.addAttribute("candlestickData", candlestickWrappers);
+
+        return "candlestick-chart";
     }
-
 }

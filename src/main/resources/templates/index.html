@@ -22,7 +22,21 @@
     <input type="text" id="candlestickSymbol" name="symbol" required><br>
     <label for="interval">Interval:</label>
     <select id="interval" name="interval" required>
-        <option th:each="interval : ${intervals}" th:value="${interval}" th:text="${interval}">Interval</option>
+        <option value="ONE_MINUTE">1m</option>
+        <option value="THREE_MINUTES">3m</option>
+        <option value="FIVE_MINUTES">5m</option>
+        <option value="FIFTEEN_MINUTES">15m</option>
+        <option value="HALF_HOURLY">30m</option>
+        <option value="HOURLY">1h</option>
+        <option value="TWO_HOURLY">2h</option>
+        <option value="FOUR_HOURLY">4h</option>
+        <option value="SIX_HOURLY">6h</option>
+        <option value="EIGHT_HOURLY">8h</option>
+        <option value="TWELVE_HOURLY">12h</option>
+        <option value="DAILY">1d</option>
+        <option value="THREE_DAILY">3d</option>
+        <option value="WEEKLY">1w</option>
+        <option value="MONTHLY">1M</option>
     </select><br>
     <label for="candlestickStartDate">Start Date:</label>
     <input type="date" id="candlestickStartDate" name="startDate"><br>
@@ -47,5 +61,7 @@
 </form>
 
 <h2><a href="/historical-rsi-form">View Historical RSI</a></h2>
+
+<h2><a href="/candlestick-chart-form">View Candlestick Chart</a></h2>
 </body>
 </html>

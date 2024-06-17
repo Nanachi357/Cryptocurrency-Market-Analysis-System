@@ -4,6 +4,8 @@ import com.binance.api.client.domain.market.Candlestick;
 import com.example.MarkPriceController.model.CandlestickEntity;
 import com.example.MarkPriceController.repository.CandlestickRepository;
 import com.example.MarkPriceController.util.DateUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,8 @@ import java.util.stream.Collectors;
 
 @Service
 public class CandlestickDataService {
+    private static final Logger logger = LoggerFactory.getLogger(BinanceHistoricalDataService.class);
+
 
     private final CandlestickRepository candlestickRepository;
 
@@ -31,7 +35,10 @@ public class CandlestickDataService {
 
     //Checks if a candlestick exists for a given symbol, open time, close time, and interval
     public boolean existsBySymbolAndOpenTime(String symbol, LocalDateTime openTime, LocalDateTime closeTime, String interval) {
-        return candlestickRepository.existsBySymbolAndOpenTimeAndCloseTimeAndInterval(symbol, openTime, closeTime, interval);
+        boolean exists = candlestickRepository.existsBySymbolAndOpenTimeAndCloseTimeAndInterval(symbol, openTime, closeTime, interval);
+        logger.info("Checking existence of candlestick: symbol={}, openTime={}, closeTime={}, interval={}. Exists: {}", symbol, openTime, closeTime, interval, exists);
+
+        return exists;
     }
 
     //Saves candlestick data to the repository

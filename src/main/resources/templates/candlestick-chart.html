@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Candlestick Chart</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+<h1>Candlestick Chart for <span th:text="${symbol}">Symbol</span></h1>
+<div id="candlestick-chart"></div>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    let data = /*[[${candlestickData}]]*/ [];
+
+    if (data.length === 0) {
+        console.error("No candlestick data available.");
+    }
+
+    const trace = {
+        x: data.map(c => new Date(c.candlestick[0])),
+        close: data.map(c => parseFloat(c.candlestick[4])),
+        high: data.map(c => parseFloat(c.candlestick[2])),
+        low: data.map(c => parseFloat(c.candlestick[3])),
+        open: data.map(c => parseFloat(c.candlestick[1])),
+        type: 'candlestick',
+        xaxis: 'x',
+        yaxis: 'y',
+        increasing: {line: {color: 'green'}},
+        decreasing: {line: {color: 'red'}}
+    };
+
+    const layout = {
+        dragmode: 'zoom',
+        showlegend: false,
+        xaxis: {
+            rangeslider: {
+                visible: false
+            }
+        },
+        yaxis: {
+            autorange: true
+        }
+    };
+
+    Plotly.newPlot('candlestick-chart', [trace], layout);
+    /*]]>*/
+</script>
+</body>
+</html>

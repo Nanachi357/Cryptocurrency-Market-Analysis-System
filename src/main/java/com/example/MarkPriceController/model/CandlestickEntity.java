@@ -13,6 +13,8 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "candlestick_data", uniqueConstraints = {
         @UniqueConstraint(columnNames = {"symbol", "open_time", "close_time", "open", "close", "high", "low", "volume", "quote_asset_volume", "number_of_trades", "taker_buy_base_asset_volume", "taker_buy_quote_asset_volume", "interval"})
+}, indexes = {
+        @Index(name = "idx_symbol_open_time_close_time_interval", columnList = "symbol, open_time, close_time, interval")
 })
 public class CandlestickEntity{
     @Id
