@@ -1,0 +1,13 @@
+filebeat.inputs:
+  - type: log
+    paths:
+      - /var/log/myapp/app.log
+    fields:
+      log_type: myapp
+    fields_under_root: true
+
+output.logstash:
+  hosts: ["logstash:5044"]
+
+setup.kibana:
+  host: "http://kibana:5601"

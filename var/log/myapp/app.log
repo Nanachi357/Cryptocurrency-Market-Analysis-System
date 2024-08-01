@@ -1,0 +1,947 @@
+2024-08-01 16:09:15 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.CryptocurrencyMarketAnalysisSystem.service.binance.BinanceHistoricalDataServiceTest]: BinanceHistoricalDataServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-01 16:09:16 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.CryptocurrencyMarketAnalysisSystem.CryptocurrencyMarketAnalysisSystemApplication for test class com.example.CryptocurrencyMarketAnalysisSystem.service.binance.BinanceHistoricalDataServiceTest
+2024-08-01 16:09:16 INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-08-01 16:09:16 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-01 16:09:16 INFO  c.e.C.s.b.BinanceHistoricalDataServiceTest - Starting BinanceHistoricalDataServiceTest using Java 20.0.2 with PID 8124 (started by Vlad in C:\Users\Vlad\Projects\Cryptocurrency-Market-Analysis-System)
+2024-08-01 16:09:16 INFO  c.e.C.s.b.BinanceHistoricalDataServiceTest - The following 1 profile is active: "test"
+2024-08-01 16:09:18 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-01 16:09:18 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 183 ms. Found 1 JPA repository interface.
+2024-08-01 16:09:19 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-01 16:09:20 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-08-01 16:09:20 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-01 16:09:20 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-01 16:09:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-01 16:09:20 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3c4ad54
+2024-08-01 16:09:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-01 16:09:20 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-01 16:09:21 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-01 16:09:22 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-01 16:09:22 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-01 16:09:24 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-01 16:09:27 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-08-01 16:09:27 INFO  c.e.C.s.b.BinanceHistoricalDataServiceTest - Started BinanceHistoricalDataServiceTest in 11.152 seconds (process running for 12.694)
+2024-08-01 16:09:29 INFO  c.e.C.s.b.BinanceHistoricalDataService - Start date-time: 2023-01-01T00:00Z[UTC]
+2024-08-01 16:09:29 INFO  c.e.C.s.b.BinanceHistoricalDataService - End date-time: 2023-01-01T00:05Z[UTC]
+2024-08-01 16:09:29 INFO  c.e.C.s.b.BinanceHistoricalDataService - Existing open times: [2023-01-01T00:02Z[UTC], 2023-01-01T00:00Z[UTC], 2023-01-01T00:05Z[UTC], 2023-01-01T00:03Z[UTC], 2023-01-01T00:01Z[UTC], 2023-01-01T00:04Z[UTC]]
+2024-08-01 16:09:29 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:00Z[UTC]
+2024-08-01 16:09:29 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:01Z[UTC]
+2024-08-01 16:09:29 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:02Z[UTC]
+2024-08-01 16:09:29 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:03Z[UTC]
+2024-08-01 16:09:29 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:04Z[UTC]
+2024-08-01 16:09:29 INFO  c.e.C.s.b.BinanceHistoricalDataService - Final list of missing candlesticks: []
+2024-08-01 16:09:29 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-01 16:09:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-01 16:09:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-01 16:21:23 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.CryptocurrencyMarketAnalysisSystem.service.binance.BinanceHistoricalDataServiceTest]: BinanceHistoricalDataServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-01 16:21:23 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.CryptocurrencyMarketAnalysisSystem.CryptocurrencyMarketAnalysisSystemApplication for test class com.example.CryptocurrencyMarketAnalysisSystem.service.binance.BinanceHistoricalDataServiceTest
+2024-08-01 16:21:23 INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-08-01 16:21:23 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-01 16:21:23 INFO  c.e.C.s.b.BinanceHistoricalDataServiceTest - Starting BinanceHistoricalDataServiceTest using Java 20.0.2 with PID 6872 (started by Vlad in C:\Users\Vlad\Projects\Cryptocurrency-Market-Analysis-System)
+2024-08-01 16:21:23 INFO  c.e.C.s.b.BinanceHistoricalDataServiceTest - The following 1 profile is active: "test"
+2024-08-01 16:21:25 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-01 16:21:26 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 207 ms. Found 1 JPA repository interface.
+2024-08-01 16:21:27 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-01 16:21:27 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-08-01 16:21:28 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-01 16:21:28 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-01 16:21:28 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-01 16:21:28 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7f1fec57
+2024-08-01 16:21:28 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-01 16:21:28 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-01 16:21:30 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-01 16:21:30 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-01 16:21:31 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-01 16:21:32 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-01 16:21:36 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-08-01 16:21:36 INFO  c.e.C.s.b.BinanceHistoricalDataServiceTest - Started BinanceHistoricalDataServiceTest in 12.808 seconds (process running for 14.629)
+2024-08-01 16:21:38 INFO  c.e.C.s.b.BinanceHistoricalDataService - Start date-time: 2023-01-01T00:00Z[UTC]
+2024-08-01 16:21:38 INFO  c.e.C.s.b.BinanceHistoricalDataService - End date-time: 2023-01-01T00:05Z[UTC]
+2024-08-01 16:21:38 INFO  c.e.C.s.b.BinanceHistoricalDataService - Existing open times: [2023-01-01T00:02Z[UTC], 2023-01-01T00:00Z[UTC], 2023-01-01T00:05Z[UTC], 2023-01-01T00:03Z[UTC], 2023-01-01T00:01Z[UTC], 2023-01-01T00:04Z[UTC]]
+2024-08-01 16:21:38 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:00Z[UTC]
+2024-08-01 16:21:38 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:01Z[UTC]
+2024-08-01 16:21:38 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:02Z[UTC]
+2024-08-01 16:21:38 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:03Z[UTC]
+2024-08-01 16:21:38 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:04Z[UTC]
+2024-08-01 16:21:38 INFO  c.e.C.s.b.BinanceHistoricalDataService - Final list of missing candlesticks: []
+2024-08-01 16:21:38 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-01 16:21:38 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-01 16:21:38 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-01 16:22:29 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.CryptocurrencyMarketAnalysisSystem.service.binance.BinanceHistoricalDataServiceTest]: BinanceHistoricalDataServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-01 16:22:30 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.CryptocurrencyMarketAnalysisSystem.CryptocurrencyMarketAnalysisSystemApplication for test class com.example.CryptocurrencyMarketAnalysisSystem.service.binance.BinanceHistoricalDataServiceTest
+2024-08-01 16:22:30 INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-08-01 16:22:30 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-01 16:22:30 INFO  c.e.C.s.b.BinanceHistoricalDataServiceTest - Starting BinanceHistoricalDataServiceTest using Java 20.0.2 with PID 2436 (started by Vlad in C:\Users\Vlad\Projects\Cryptocurrency-Market-Analysis-System)
+2024-08-01 16:22:30 INFO  c.e.C.s.b.BinanceHistoricalDataServiceTest - The following 1 profile is active: "test"
+2024-08-01 16:22:32 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-01 16:22:32 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 209 ms. Found 1 JPA repository interface.
+2024-08-01 16:22:34 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-01 16:22:34 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-08-01 16:22:34 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-01 16:22:34 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-01 16:22:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-01 16:22:35 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@517bdce0
+2024-08-01 16:22:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-01 16:22:35 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-01 16:22:36 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-01 16:22:36 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-01 16:22:37 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-01 16:22:38 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-01 16:22:40 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-08-01 16:22:40 INFO  c.e.C.s.b.BinanceHistoricalDataServiceTest - Started BinanceHistoricalDataServiceTest in 10.339 seconds (process running for 13.058)
+2024-08-01 16:22:42 INFO  c.e.C.s.b.BinanceHistoricalDataService - Start date-time: 2023-01-01T00:00Z[UTC]
+2024-08-01 16:22:42 INFO  c.e.C.s.b.BinanceHistoricalDataService - End date-time: 2023-01-01T00:05Z[UTC]
+2024-08-01 16:22:42 INFO  c.e.C.s.b.BinanceHistoricalDataService - Existing open times: [2023-01-01T00:02Z[UTC], 2023-01-01T00:00Z[UTC], 2023-01-01T00:05Z[UTC], 2023-01-01T00:03Z[UTC], 2023-01-01T00:01Z[UTC], 2023-01-01T00:04Z[UTC]]
+2024-08-01 16:22:42 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:00Z[UTC]
+2024-08-01 16:22:42 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:01Z[UTC]
+2024-08-01 16:22:42 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:02Z[UTC]
+2024-08-01 16:22:42 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:03Z[UTC]
+2024-08-01 16:22:42 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:04Z[UTC]
+2024-08-01 16:22:42 INFO  c.e.C.s.b.BinanceHistoricalDataService - Final list of missing candlesticks: []
+2024-08-01 16:22:43 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetching candlesticks from API: symbol=BTCUSDT, interval=ONE_MINUTE, start=1672531320000, end=1672531800000
+2024-08-01 16:22:43 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetching missing candlesticks from 1672531320000 to 1672531800000
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlesticks fetched from API: 9
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531320000, closeTime=1672531379999
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531380000, closeTime=1672531439999
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531440000, closeTime=1672531499999
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531500000, closeTime=1672531559999
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531560000, closeTime=1672531619999
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531620000, closeTime=1672531679999
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531680000, closeTime=1672531739999
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531740000, closeTime=1672531799999
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531800000, closeTime=1672531859999
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Validating candlestick order for symbol=BTCUSDT, interval=ONE_MINUTE
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving candlesticks to database: symbol=BTCUSDT, interval=ONE_MINUTE
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531320000,open=16539.31000000,high=16541.17000000,low=16534.52000000,close=16536.43000000,volume=62.90197000,closeTime=1672531379999,quoteAssetVolume=1040248.39837130,numberOfTrades=1930,takerBuyBaseAssetVolume=20.73999000,takerBuyQuoteAssetVolume=343009.42850780],CandlestickInterval ONE_MINUTE
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531320000,open=16539.31000000,high=16541.17000000,low=16534.52000000,close=16536.43000000,volume=62.90197000,closeTime=1672531379999,quoteAssetVolume=1040248.39837130,numberOfTrades=1930,takerBuyBaseAssetVolume=20.73999000,takerBuyQuoteAssetVolume=343009.42850780]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531380000,open=16536.43000000,high=16537.28000000,low=16531.00000000,close=16533.65000000,volume=115.71894000,closeTime=1672531439999,quoteAssetVolume=1913267.61073800,numberOfTrades=2956,takerBuyBaseAssetVolume=49.40758000,takerBuyQuoteAssetVolume=816919.41683040],CandlestickInterval ONE_MINUTE
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531380000,open=16536.43000000,high=16537.28000000,low=16531.00000000,close=16533.65000000,volume=115.71894000,closeTime=1672531439999,quoteAssetVolume=1913267.61073800,numberOfTrades=2956,takerBuyBaseAssetVolume=49.40758000,takerBuyQuoteAssetVolume=816919.41683040]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531440000,open=16534.12000000,high=16536.08000000,low=16527.51000000,close=16535.38000000,volume=144.45369000,closeTime=1672531499999,quoteAssetVolume=2388080.63492980,numberOfTrades=3795,takerBuyBaseAssetVolume=76.52421000,takerBuyQuoteAssetVolume=1265079.72183150],CandlestickInterval ONE_MINUTE
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531440000,open=16534.12000000,high=16536.08000000,low=16527.51000000,close=16535.38000000,volume=144.45369000,closeTime=1672531499999,quoteAssetVolume=2388080.63492980,numberOfTrades=3795,takerBuyBaseAssetVolume=76.52421000,takerBuyQuoteAssetVolume=1265079.72183150]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531500000,open=16534.91000000,high=16537.80000000,low=16533.94000000,close=16536.70000000,volume=53.58957000,closeTime=1672531559999,quoteAssetVolume=886140.95771700,numberOfTrades=2130,takerBuyBaseAssetVolume=30.89856000,takerBuyQuoteAssetVolume=510933.48631140],CandlestickInterval ONE_MINUTE
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531500000,open=16534.91000000,high=16537.80000000,low=16533.94000000,close=16536.70000000,volume=53.58957000,closeTime=1672531559999,quoteAssetVolume=886140.95771700,numberOfTrades=2130,takerBuyBaseAssetVolume=30.89856000,takerBuyQuoteAssetVolume=510933.48631140]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531560000,open=16536.76000000,high=16540.43000000,low=16534.20000000,close=16535.91000000,volume=96.45571000,closeTime=1672531619999,quoteAssetVolume=1595134.09750950,numberOfTrades=2348,takerBuyBaseAssetVolume=42.82683000,takerBuyQuoteAssetVolume=708257.82051220],CandlestickInterval ONE_MINUTE
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531560000,open=16536.76000000,high=16540.43000000,low=16534.20000000,close=16535.91000000,volume=96.45571000,closeTime=1672531619999,quoteAssetVolume=1595134.09750950,numberOfTrades=2348,takerBuyBaseAssetVolume=42.82683000,takerBuyQuoteAssetVolume=708257.82051220]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531620000,open=16535.91000000,high=16539.69000000,low=16533.95000000,close=16534.67000000,volume=56.72010000,closeTime=1672531679999,quoteAssetVolume=937969.84484200,numberOfTrades=2159,takerBuyBaseAssetVolume=27.87678000,takerBuyQuoteAssetVolume=461005.00590840],CandlestickInterval ONE_MINUTE
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531620000,open=16535.91000000,high=16539.69000000,low=16533.95000000,close=16534.67000000,volume=56.72010000,closeTime=1672531679999,quoteAssetVolume=937969.84484200,numberOfTrades=2159,takerBuyBaseAssetVolume=27.87678000,takerBuyQuoteAssetVolume=461005.00590840]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531680000,open=16533.98000000,high=16534.79000000,low=16528.00000000,close=16529.28000000,volume=95.13552000,closeTime=1672531739999,quoteAssetVolume=1572652.32586340,numberOfTrades=2619,takerBuyBaseAssetVolume=48.51311000,takerBuyQuoteAssetVolume=801937.09233730],CandlestickInterval ONE_MINUTE
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531680000,open=16533.98000000,high=16534.79000000,low=16528.00000000,close=16529.28000000,volume=95.13552000,closeTime=1672531739999,quoteAssetVolume=1572652.32586340,numberOfTrades=2619,takerBuyBaseAssetVolume=48.51311000,takerBuyQuoteAssetVolume=801937.09233730]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531740000,open=16529.28000000,high=16529.52000000,low=16522.55000000,close=16526.67000000,volume=89.28953000,closeTime=1672531799999,quoteAssetVolume=1475565.20839320,numberOfTrades=2688,takerBuyBaseAssetVolume=39.49913000,takerBuyQuoteAssetVolume=652745.81228570],CandlestickInterval ONE_MINUTE
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531740000,open=16529.28000000,high=16529.52000000,low=16522.55000000,close=16526.67000000,volume=89.28953000,closeTime=1672531799999,quoteAssetVolume=1475565.20839320,numberOfTrades=2688,takerBuyBaseAssetVolume=39.49913000,takerBuyQuoteAssetVolume=652745.81228570]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531800000,open=16526.67000000,high=16530.87000000,low=16522.55000000,close=16525.34000000,volume=96.60421000,closeTime=1672531859999,quoteAssetVolume=1596529.14203180,numberOfTrades=3285,takerBuyBaseAssetVolume=42.77134000,takerBuyQuoteAssetVolume=706865.43078800],CandlestickInterval ONE_MINUTE
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531800000,open=16526.67000000,high=16530.87000000,low=16522.55000000,close=16525.34000000,volume=96.60421000,closeTime=1672531859999,quoteAssetVolume=1596529.14203180,numberOfTrades=3285,takerBuyBaseAssetVolume=42.77134000,takerBuyQuoteAssetVolume=706865.43078800]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Updating candlestick set: symbol=BTCUSDT, startDateTime=2023-01-01T00:00Z, endDateTime=2023-01-01T00:10Z, interval=ONE_MINUTE
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - updateCandlestickSet called with params: symbol=BTCUSDT, startDateTime=2023-01-01T00:00Z, endDateTime=2023-01-01T00:10Z, interval=ONE_MINUTE, allCandlesticksSet=[]
+2024-08-01 16:22:44 WARN  c.e.C.s.b.BinanceHistoricalDataService - No progress in fetching missing candlesticks, breaking out of the loop
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Waiting for 15289 milliseconds until the next minute
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - start 2023-01-01T00:00Z and end 2023-01-01T00:02:30Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - startTimeMillis 1672531200000 and endTimeMillis 1672531350000
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - candlestickList: [Candlestick[openTime=1672531200000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531260000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531260000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531320000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531320000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531380000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531380000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531440000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531440000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531500000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - candlestickSet: [CandlestickWrapper[candlestick=Candlestick[openTime=1672531320000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531380000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]], CandlestickWrapper[candlestick=Candlestick[openTime=1672531260000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531320000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]], CandlestickWrapper[candlestick=Candlestick[openTime=1672531440000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531500000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]], CandlestickWrapper[candlestick=Candlestick[openTime=1672531200000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531260000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]], CandlestickWrapper[candlestick=Candlestick[openTime=1672531380000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531440000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]]]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Retrieving candlestick data for symbol: BTCUSDT, startTime: 2023-01-01T00:00Z, endTime: 2023-01-01T01:00Z, interval: ONE_MINUTE
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - fetchExistingCandlesticks symbol: BTCUSDT, startDateTime: 2023-01-01T00:00Z, endDateTime: 2023-01-01T01:00Z, interval: ONE_MINUTE
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlesticks by fetchExistingCandlesticks: [Candlestick[openTime=1672531200000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531260000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531260000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531320000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531320000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531380000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531380000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531440000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531440000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531500000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Start date-time: 2023-01-01T00:00Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - End date-time: 2023-01-01T01:00Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Existing open times: [2023-01-01T00:00Z[UTC], 2023-01-01T00:01Z[UTC]]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:00Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:01Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:02Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:02Z, closeTime=2023-01-01T00:03Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:03Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:03Z, closeTime=2023-01-01T00:04Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:04Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:04Z, closeTime=2023-01-01T00:05Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:05Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:05Z, closeTime=2023-01-01T00:06Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:06Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:06Z, closeTime=2023-01-01T00:07Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:07Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:07Z, closeTime=2023-01-01T00:08Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:08Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:08Z, closeTime=2023-01-01T00:09Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:09Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:09Z, closeTime=2023-01-01T00:10Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:10Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:10Z, closeTime=2023-01-01T00:11Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:11Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:11Z, closeTime=2023-01-01T00:12Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:12Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:12Z, closeTime=2023-01-01T00:13Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:13Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:13Z, closeTime=2023-01-01T00:14Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:14Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:14Z, closeTime=2023-01-01T00:15Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:15Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:15Z, closeTime=2023-01-01T00:16Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:16Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:16Z, closeTime=2023-01-01T00:17Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:17Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:17Z, closeTime=2023-01-01T00:18Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:18Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:18Z, closeTime=2023-01-01T00:19Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:19Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:19Z, closeTime=2023-01-01T00:20Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:20Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:20Z, closeTime=2023-01-01T00:21Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:21Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:21Z, closeTime=2023-01-01T00:22Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:22Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:22Z, closeTime=2023-01-01T00:23Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:23Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:23Z, closeTime=2023-01-01T00:24Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:24Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:24Z, closeTime=2023-01-01T00:25Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:25Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:25Z, closeTime=2023-01-01T00:26Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:26Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:26Z, closeTime=2023-01-01T00:27Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:27Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:27Z, closeTime=2023-01-01T00:28Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:28Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:28Z, closeTime=2023-01-01T00:29Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:29Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:29Z, closeTime=2023-01-01T00:30Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:30Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:30Z, closeTime=2023-01-01T00:31Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:31Z
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:31Z, closeTime=2023-01-01T00:32Z]
+2024-08-01 16:22:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:32Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:32Z, closeTime=2023-01-01T00:33Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:33Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:33Z, closeTime=2023-01-01T00:34Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:34Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:34Z, closeTime=2023-01-01T00:35Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:35Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:35Z, closeTime=2023-01-01T00:36Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:36Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:36Z, closeTime=2023-01-01T00:37Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:37Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:37Z, closeTime=2023-01-01T00:38Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:38Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:38Z, closeTime=2023-01-01T00:39Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:39Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:39Z, closeTime=2023-01-01T00:40Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:40Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:40Z, closeTime=2023-01-01T00:41Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:41Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:41Z, closeTime=2023-01-01T00:42Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:42Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:42Z, closeTime=2023-01-01T00:43Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:43Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:43Z, closeTime=2023-01-01T00:44Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:44Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:44Z, closeTime=2023-01-01T00:45Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:45Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:45Z, closeTime=2023-01-01T00:46Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:46Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:46Z, closeTime=2023-01-01T00:47Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:47Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:47Z, closeTime=2023-01-01T00:48Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:48Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:48Z, closeTime=2023-01-01T00:49Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:49Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:49Z, closeTime=2023-01-01T00:50Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:50Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:50Z, closeTime=2023-01-01T00:51Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:51Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:51Z, closeTime=2023-01-01T00:52Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:52Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:52Z, closeTime=2023-01-01T00:53Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:53Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:53Z, closeTime=2023-01-01T00:54Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:54Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:54Z, closeTime=2023-01-01T00:55Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:55Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:55Z, closeTime=2023-01-01T00:56Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:56Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:56Z, closeTime=2023-01-01T00:57Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:57Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:57Z, closeTime=2023-01-01T00:58Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:58Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:58Z, closeTime=2023-01-01T00:59Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:59Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:59Z, closeTime=2023-01-01T01:00Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Final list of missing candlesticks: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:02Z[UTC], close time - 2023-01-01T00:02:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:03Z[UTC], close time - 2023-01-01T00:03:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:04Z[UTC], close time - 2023-01-01T00:04:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:05Z[UTC], close time - 2023-01-01T00:05:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:06Z[UTC], close time - 2023-01-01T00:06:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:07Z[UTC], close time - 2023-01-01T00:07:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:08Z[UTC], close time - 2023-01-01T00:08:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:09Z[UTC], close time - 2023-01-01T00:09:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:10Z[UTC], close time - 2023-01-01T00:10:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:11Z[UTC], close time - 2023-01-01T00:11:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:12Z[UTC], close time - 2023-01-01T00:12:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:13Z[UTC], close time - 2023-01-01T00:13:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:14Z[UTC], close time - 2023-01-01T00:14:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:15Z[UTC], close time - 2023-01-01T00:15:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:16Z[UTC], close time - 2023-01-01T00:16:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:17Z[UTC], close time - 2023-01-01T00:17:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:18Z[UTC], close time - 2023-01-01T00:18:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:19Z[UTC], close time - 2023-01-01T00:19:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:20Z[UTC], close time - 2023-01-01T00:20:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:21Z[UTC], close time - 2023-01-01T00:21:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:22Z[UTC], close time - 2023-01-01T00:22:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:23Z[UTC], close time - 2023-01-01T00:23:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:24Z[UTC], close time - 2023-01-01T00:24:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:25Z[UTC], close time - 2023-01-01T00:25:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:26Z[UTC], close time - 2023-01-01T00:26:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:27Z[UTC], close time - 2023-01-01T00:27:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:28Z[UTC], close time - 2023-01-01T00:28:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:29Z[UTC], close time - 2023-01-01T00:29:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:30Z[UTC], close time - 2023-01-01T00:30:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:31Z[UTC], close time - 2023-01-01T00:31:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:32Z[UTC], close time - 2023-01-01T00:32:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:33Z[UTC], close time - 2023-01-01T00:33:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:34Z[UTC], close time - 2023-01-01T00:34:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:35Z[UTC], close time - 2023-01-01T00:35:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:36Z[UTC], close time - 2023-01-01T00:36:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:37Z[UTC], close time - 2023-01-01T00:37:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:38Z[UTC], close time - 2023-01-01T00:38:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:39Z[UTC], close time - 2023-01-01T00:39:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:40Z[UTC], close time - 2023-01-01T00:40:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:41Z[UTC], close time - 2023-01-01T00:41:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:42Z[UTC], close time - 2023-01-01T00:42:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:43Z[UTC], close time - 2023-01-01T00:43:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:44Z[UTC], close time - 2023-01-01T00:44:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:45Z[UTC], close time - 2023-01-01T00:45:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:46Z[UTC], close time - 2023-01-01T00:46:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:47Z[UTC], close time - 2023-01-01T00:47:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:48Z[UTC], close time - 2023-01-01T00:48:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:49Z[UTC], close time - 2023-01-01T00:49:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:50Z[UTC], close time - 2023-01-01T00:50:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:51Z[UTC], close time - 2023-01-01T00:51:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:52Z[UTC], close time - 2023-01-01T00:52:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:53Z[UTC], close time - 2023-01-01T00:53:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:54Z[UTC], close time - 2023-01-01T00:54:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:55Z[UTC], close time - 2023-01-01T00:55:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:56Z[UTC], close time - 2023-01-01T00:56:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:57Z[UTC], close time - 2023-01-01T00:57:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:58Z[UTC], close time - 2023-01-01T00:58:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:59Z[UTC], close time - 2023-01-01T00:59:59.999Z[UTC]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Retrieving candlestick data for symbol: BTCUSDT, startTime: 2023-01-01T00:00Z, endTime: 2023-01-01T00:05Z, interval: ONE_MINUTE
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Start date-time: 2023-01-01T00:00Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - End date-time: 2023-01-01T00:05Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Existing open times: [2023-01-01T00:02Z[UTC], 2023-01-01T00:00Z[UTC], 2023-01-01T00:01Z[UTC]]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:00Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:01Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:02Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:03Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:03Z, closeTime=2023-01-01T00:04Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:04Z
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:04Z, closeTime=2023-01-01T00:05Z]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Final list of missing candlesticks: [null, null]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1704067200000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1704067259999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25],CandlestickInterval ONE_MINUTE
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking existence of candlestick: symbol=BTCUSDT, openTime=2024-01-01T00:00Z[UTC], closeTime=2024-01-01T00:00:59.999Z[UTC], interval=ONE_MINUTE
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Exists: false
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - In saveCandlestickData - Candlestick Candlestick[openTime=1704067200000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1704067259999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25],CandlestickInterval ONE_MINUTE, symbolBTCUSDT
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saved new candlestick to database: CandlestickEntity{id=null, symbol='BTCUSDT', openTime=2024-01-01T00:00Z, closeTime=2024-01-01T00:00:59.999Z, open=0.1, close=0.2, high=0.3, low=0.1, volume=100.0, quoteAssetVolume=50.0, numberOfTrades=10, takerBuyBaseAssetVolume=50.0, takerBuyQuoteAssetVolume=25.0, interval='ONE_MINUTE'}
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1704067200000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1704067259999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25]
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1704067260000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1704067319999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25],CandlestickInterval ONE_MINUTE
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking existence of candlestick: symbol=BTCUSDT, openTime=2024-01-01T00:01Z[UTC], closeTime=2024-01-01T00:01:59.999Z[UTC], interval=ONE_MINUTE
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Exists: false
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - In saveCandlestickData - Candlestick Candlestick[openTime=1704067260000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1704067319999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25],CandlestickInterval ONE_MINUTE, symbolBTCUSDT
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saved new candlestick to database: CandlestickEntity{id=null, symbol='BTCUSDT', openTime=2024-01-01T00:01Z, closeTime=2024-01-01T00:01:59.999Z, open=0.1, close=0.2, high=0.3, low=0.1, volume=100.0, quoteAssetVolume=50.0, numberOfTrades=10, takerBuyBaseAssetVolume=50.0, takerBuyQuoteAssetVolume=25.0, interval='ONE_MINUTE'}
+2024-08-01 16:22:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1704067260000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1704067319999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25]
+2024-08-01 16:22:45 ERROR c.e.C.s.b.BinanceHistoricalDataService - Candlestick out of order: Candlestick[openTime=1672531200000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1672531258999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25]
+2024-08-01 16:22:45 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-01 16:22:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-01 16:22:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-01 16:38:03 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.CryptocurrencyMarketAnalysisSystem.service.binance.BinanceHistoricalDataServiceTest]: BinanceHistoricalDataServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-01 16:38:03 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.CryptocurrencyMarketAnalysisSystem.CryptocurrencyMarketAnalysisSystemApplication for test class com.example.CryptocurrencyMarketAnalysisSystem.service.binance.BinanceHistoricalDataServiceTest
+2024-08-01 16:38:03 INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-08-01 16:38:03 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-01 16:38:03 INFO  c.e.C.s.b.BinanceHistoricalDataServiceTest - Starting BinanceHistoricalDataServiceTest using Java 20.0.2 with PID 9452 (started by Vlad in C:\Users\Vlad\Projects\Cryptocurrency-Market-Analysis-System)
+2024-08-01 16:38:03 INFO  c.e.C.s.b.BinanceHistoricalDataServiceTest - The following 1 profile is active: "test"
+2024-08-01 16:38:05 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-01 16:38:06 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 229 ms. Found 1 JPA repository interface.
+2024-08-01 16:38:07 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-01 16:38:07 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-08-01 16:38:07 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-01 16:38:08 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-01 16:38:08 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-01 16:38:08 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7793b55d
+2024-08-01 16:38:08 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-01 16:38:08 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-01 16:38:09 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-01 16:38:09 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-01 16:38:10 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-01 16:38:11 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-01 16:38:14 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-08-01 16:38:14 INFO  c.e.C.s.b.BinanceHistoricalDataServiceTest - Started BinanceHistoricalDataServiceTest in 11.175 seconds (process running for 13.223)
+2024-08-01 16:38:17 INFO  c.e.C.s.b.BinanceHistoricalDataService - Start date-time: 2023-01-01T00:00Z[UTC]
+2024-08-01 16:38:17 INFO  c.e.C.s.b.BinanceHistoricalDataService - End date-time: 2023-01-01T00:05Z[UTC]
+2024-08-01 16:38:17 INFO  c.e.C.s.b.BinanceHistoricalDataService - Existing open times: [2023-01-01T00:02Z[UTC], 2023-01-01T00:00Z[UTC], 2023-01-01T00:05Z[UTC], 2023-01-01T00:03Z[UTC], 2023-01-01T00:01Z[UTC], 2023-01-01T00:04Z[UTC]]
+2024-08-01 16:38:17 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:00Z[UTC]
+2024-08-01 16:38:17 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:01Z[UTC]
+2024-08-01 16:38:17 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:02Z[UTC]
+2024-08-01 16:38:17 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:03Z[UTC]
+2024-08-01 16:38:17 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:04Z[UTC]
+2024-08-01 16:38:17 INFO  c.e.C.s.b.BinanceHistoricalDataService - Final list of missing candlesticks: []
+2024-08-01 16:38:17 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetching candlesticks from API: symbol=BTCUSDT, interval=ONE_MINUTE, start=1672531320000, end=1672531800000
+2024-08-01 16:38:17 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetching missing candlesticks from 1672531320000 to 1672531800000
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlesticks fetched from API: 9
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531320000, closeTime=1672531379999
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531380000, closeTime=1672531439999
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531440000, closeTime=1672531499999
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531500000, closeTime=1672531559999
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531560000, closeTime=1672531619999
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531620000, closeTime=1672531679999
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531680000, closeTime=1672531739999
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531740000, closeTime=1672531799999
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531800000, closeTime=1672531859999
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Validating candlestick order for symbol=BTCUSDT, interval=ONE_MINUTE
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving candlesticks to database: symbol=BTCUSDT, interval=ONE_MINUTE
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531320000,open=16539.31000000,high=16541.17000000,low=16534.52000000,close=16536.43000000,volume=62.90197000,closeTime=1672531379999,quoteAssetVolume=1040248.39837130,numberOfTrades=1930,takerBuyBaseAssetVolume=20.73999000,takerBuyQuoteAssetVolume=343009.42850780],CandlestickInterval ONE_MINUTE
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531320000,open=16539.31000000,high=16541.17000000,low=16534.52000000,close=16536.43000000,volume=62.90197000,closeTime=1672531379999,quoteAssetVolume=1040248.39837130,numberOfTrades=1930,takerBuyBaseAssetVolume=20.73999000,takerBuyQuoteAssetVolume=343009.42850780]
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531380000,open=16536.43000000,high=16537.28000000,low=16531.00000000,close=16533.65000000,volume=115.71894000,closeTime=1672531439999,quoteAssetVolume=1913267.61073800,numberOfTrades=2956,takerBuyBaseAssetVolume=49.40758000,takerBuyQuoteAssetVolume=816919.41683040],CandlestickInterval ONE_MINUTE
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531380000,open=16536.43000000,high=16537.28000000,low=16531.00000000,close=16533.65000000,volume=115.71894000,closeTime=1672531439999,quoteAssetVolume=1913267.61073800,numberOfTrades=2956,takerBuyBaseAssetVolume=49.40758000,takerBuyQuoteAssetVolume=816919.41683040]
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531440000,open=16534.12000000,high=16536.08000000,low=16527.51000000,close=16535.38000000,volume=144.45369000,closeTime=1672531499999,quoteAssetVolume=2388080.63492980,numberOfTrades=3795,takerBuyBaseAssetVolume=76.52421000,takerBuyQuoteAssetVolume=1265079.72183150],CandlestickInterval ONE_MINUTE
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531440000,open=16534.12000000,high=16536.08000000,low=16527.51000000,close=16535.38000000,volume=144.45369000,closeTime=1672531499999,quoteAssetVolume=2388080.63492980,numberOfTrades=3795,takerBuyBaseAssetVolume=76.52421000,takerBuyQuoteAssetVolume=1265079.72183150]
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531500000,open=16534.91000000,high=16537.80000000,low=16533.94000000,close=16536.70000000,volume=53.58957000,closeTime=1672531559999,quoteAssetVolume=886140.95771700,numberOfTrades=2130,takerBuyBaseAssetVolume=30.89856000,takerBuyQuoteAssetVolume=510933.48631140],CandlestickInterval ONE_MINUTE
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531500000,open=16534.91000000,high=16537.80000000,low=16533.94000000,close=16536.70000000,volume=53.58957000,closeTime=1672531559999,quoteAssetVolume=886140.95771700,numberOfTrades=2130,takerBuyBaseAssetVolume=30.89856000,takerBuyQuoteAssetVolume=510933.48631140]
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531560000,open=16536.76000000,high=16540.43000000,low=16534.20000000,close=16535.91000000,volume=96.45571000,closeTime=1672531619999,quoteAssetVolume=1595134.09750950,numberOfTrades=2348,takerBuyBaseAssetVolume=42.82683000,takerBuyQuoteAssetVolume=708257.82051220],CandlestickInterval ONE_MINUTE
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531560000,open=16536.76000000,high=16540.43000000,low=16534.20000000,close=16535.91000000,volume=96.45571000,closeTime=1672531619999,quoteAssetVolume=1595134.09750950,numberOfTrades=2348,takerBuyBaseAssetVolume=42.82683000,takerBuyQuoteAssetVolume=708257.82051220]
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531620000,open=16535.91000000,high=16539.69000000,low=16533.95000000,close=16534.67000000,volume=56.72010000,closeTime=1672531679999,quoteAssetVolume=937969.84484200,numberOfTrades=2159,takerBuyBaseAssetVolume=27.87678000,takerBuyQuoteAssetVolume=461005.00590840],CandlestickInterval ONE_MINUTE
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531620000,open=16535.91000000,high=16539.69000000,low=16533.95000000,close=16534.67000000,volume=56.72010000,closeTime=1672531679999,quoteAssetVolume=937969.84484200,numberOfTrades=2159,takerBuyBaseAssetVolume=27.87678000,takerBuyQuoteAssetVolume=461005.00590840]
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531680000,open=16533.98000000,high=16534.79000000,low=16528.00000000,close=16529.28000000,volume=95.13552000,closeTime=1672531739999,quoteAssetVolume=1572652.32586340,numberOfTrades=2619,takerBuyBaseAssetVolume=48.51311000,takerBuyQuoteAssetVolume=801937.09233730],CandlestickInterval ONE_MINUTE
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531680000,open=16533.98000000,high=16534.79000000,low=16528.00000000,close=16529.28000000,volume=95.13552000,closeTime=1672531739999,quoteAssetVolume=1572652.32586340,numberOfTrades=2619,takerBuyBaseAssetVolume=48.51311000,takerBuyQuoteAssetVolume=801937.09233730]
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531740000,open=16529.28000000,high=16529.52000000,low=16522.55000000,close=16526.67000000,volume=89.28953000,closeTime=1672531799999,quoteAssetVolume=1475565.20839320,numberOfTrades=2688,takerBuyBaseAssetVolume=39.49913000,takerBuyQuoteAssetVolume=652745.81228570],CandlestickInterval ONE_MINUTE
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531740000,open=16529.28000000,high=16529.52000000,low=16522.55000000,close=16526.67000000,volume=89.28953000,closeTime=1672531799999,quoteAssetVolume=1475565.20839320,numberOfTrades=2688,takerBuyBaseAssetVolume=39.49913000,takerBuyQuoteAssetVolume=652745.81228570]
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531800000,open=16526.67000000,high=16530.87000000,low=16522.55000000,close=16525.34000000,volume=96.60421000,closeTime=1672531859999,quoteAssetVolume=1596529.14203180,numberOfTrades=3285,takerBuyBaseAssetVolume=42.77134000,takerBuyQuoteAssetVolume=706865.43078800],CandlestickInterval ONE_MINUTE
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531800000,open=16526.67000000,high=16530.87000000,low=16522.55000000,close=16525.34000000,volume=96.60421000,closeTime=1672531859999,quoteAssetVolume=1596529.14203180,numberOfTrades=3285,takerBuyBaseAssetVolume=42.77134000,takerBuyQuoteAssetVolume=706865.43078800]
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Updating candlestick set: symbol=BTCUSDT, startDateTime=2023-01-01T00:00Z, endDateTime=2023-01-01T00:10Z, interval=ONE_MINUTE
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - updateCandlestickSet called with params: symbol=BTCUSDT, startDateTime=2023-01-01T00:00Z, endDateTime=2023-01-01T00:10Z, interval=ONE_MINUTE, allCandlesticksSet=[]
+2024-08-01 16:38:18 WARN  c.e.C.s.b.BinanceHistoricalDataService - No progress in fetching missing candlesticks, breaking out of the loop
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - Waiting for 41051 milliseconds until the next minute
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - start 2023-01-01T00:00Z and end 2023-01-01T00:02:30Z
+2024-08-01 16:38:18 INFO  c.e.C.s.b.BinanceHistoricalDataService - startTimeMillis 1672531200000 and endTimeMillis 1672531350000
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - candlestickList: [Candlestick[openTime=1672531200000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531260000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531260000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531320000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531320000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531380000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531380000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531440000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531440000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531500000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - candlestickSet: [CandlestickWrapper[candlestick=Candlestick[openTime=1672531320000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531380000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]], CandlestickWrapper[candlestick=Candlestick[openTime=1672531260000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531320000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]], CandlestickWrapper[candlestick=Candlestick[openTime=1672531440000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531500000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]], CandlestickWrapper[candlestick=Candlestick[openTime=1672531200000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531260000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]], CandlestickWrapper[candlestick=Candlestick[openTime=1672531380000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531440000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]]]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Retrieving candlestick data for symbol: BTCUSDT, startTime: 2023-01-01T00:00Z, endTime: 2023-01-01T01:00Z, interval: ONE_MINUTE
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - fetchExistingCandlesticks symbol: BTCUSDT, startDateTime: 2023-01-01T00:00Z, endDateTime: 2023-01-01T01:00Z, interval: ONE_MINUTE
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlesticks by fetchExistingCandlesticks: [Candlestick[openTime=1672531200000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531260000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531260000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531320000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531320000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531380000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531380000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531440000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531440000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531500000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Start date-time: 2023-01-01T00:00Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - End date-time: 2023-01-01T01:00Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Existing open times: [2023-01-01T00:00Z[UTC], 2023-01-01T00:01Z[UTC]]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:00Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:01Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:02Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:02Z, closeTime=2023-01-01T00:03Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:03Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:03Z, closeTime=2023-01-01T00:04Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:04Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:04Z, closeTime=2023-01-01T00:05Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:05Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:05Z, closeTime=2023-01-01T00:06Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:06Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:06Z, closeTime=2023-01-01T00:07Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:07Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:07Z, closeTime=2023-01-01T00:08Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:08Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:08Z, closeTime=2023-01-01T00:09Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:09Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:09Z, closeTime=2023-01-01T00:10Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:10Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:10Z, closeTime=2023-01-01T00:11Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:11Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:11Z, closeTime=2023-01-01T00:12Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:12Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:12Z, closeTime=2023-01-01T00:13Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:13Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:13Z, closeTime=2023-01-01T00:14Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:14Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:14Z, closeTime=2023-01-01T00:15Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:15Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:15Z, closeTime=2023-01-01T00:16Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:16Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:16Z, closeTime=2023-01-01T00:17Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:17Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:17Z, closeTime=2023-01-01T00:18Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:18Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:18Z, closeTime=2023-01-01T00:19Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:19Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:19Z, closeTime=2023-01-01T00:20Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:20Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:20Z, closeTime=2023-01-01T00:21Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:21Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:21Z, closeTime=2023-01-01T00:22Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:22Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:22Z, closeTime=2023-01-01T00:23Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:23Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:23Z, closeTime=2023-01-01T00:24Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:24Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:24Z, closeTime=2023-01-01T00:25Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:25Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:25Z, closeTime=2023-01-01T00:26Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:26Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:26Z, closeTime=2023-01-01T00:27Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:27Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:27Z, closeTime=2023-01-01T00:28Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:28Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:28Z, closeTime=2023-01-01T00:29Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:29Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:29Z, closeTime=2023-01-01T00:30Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:30Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:30Z, closeTime=2023-01-01T00:31Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:31Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:31Z, closeTime=2023-01-01T00:32Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:32Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:32Z, closeTime=2023-01-01T00:33Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:33Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:33Z, closeTime=2023-01-01T00:34Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:34Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:34Z, closeTime=2023-01-01T00:35Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:35Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:35Z, closeTime=2023-01-01T00:36Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:36Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:36Z, closeTime=2023-01-01T00:37Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:37Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:37Z, closeTime=2023-01-01T00:38Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:38Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:38Z, closeTime=2023-01-01T00:39Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:39Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:39Z, closeTime=2023-01-01T00:40Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:40Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:40Z, closeTime=2023-01-01T00:41Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:41Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:41Z, closeTime=2023-01-01T00:42Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:42Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:42Z, closeTime=2023-01-01T00:43Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:43Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:43Z, closeTime=2023-01-01T00:44Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:44Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:44Z, closeTime=2023-01-01T00:45Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:45Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:45Z, closeTime=2023-01-01T00:46Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:46Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:46Z, closeTime=2023-01-01T00:47Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:47Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:47Z, closeTime=2023-01-01T00:48Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:48Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:48Z, closeTime=2023-01-01T00:49Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:49Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:49Z, closeTime=2023-01-01T00:50Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:50Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:50Z, closeTime=2023-01-01T00:51Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:51Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:51Z, closeTime=2023-01-01T00:52Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:52Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:52Z, closeTime=2023-01-01T00:53Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:53Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:53Z, closeTime=2023-01-01T00:54Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:54Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:54Z, closeTime=2023-01-01T00:55Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:55Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:55Z, closeTime=2023-01-01T00:56Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:56Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:56Z, closeTime=2023-01-01T00:57Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:57Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:57Z, closeTime=2023-01-01T00:58Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:58Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:58Z, closeTime=2023-01-01T00:59Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:59Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:59Z, closeTime=2023-01-01T01:00Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Final list of missing candlesticks: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:02Z[UTC], close time - 2023-01-01T00:02:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:03Z[UTC], close time - 2023-01-01T00:03:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:04Z[UTC], close time - 2023-01-01T00:04:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:05Z[UTC], close time - 2023-01-01T00:05:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:06Z[UTC], close time - 2023-01-01T00:06:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:07Z[UTC], close time - 2023-01-01T00:07:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:08Z[UTC], close time - 2023-01-01T00:08:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:09Z[UTC], close time - 2023-01-01T00:09:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:10Z[UTC], close time - 2023-01-01T00:10:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:11Z[UTC], close time - 2023-01-01T00:11:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:12Z[UTC], close time - 2023-01-01T00:12:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:13Z[UTC], close time - 2023-01-01T00:13:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:14Z[UTC], close time - 2023-01-01T00:14:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:15Z[UTC], close time - 2023-01-01T00:15:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:16Z[UTC], close time - 2023-01-01T00:16:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:17Z[UTC], close time - 2023-01-01T00:17:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:18Z[UTC], close time - 2023-01-01T00:18:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:19Z[UTC], close time - 2023-01-01T00:19:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:20Z[UTC], close time - 2023-01-01T00:20:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:21Z[UTC], close time - 2023-01-01T00:21:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:22Z[UTC], close time - 2023-01-01T00:22:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:23Z[UTC], close time - 2023-01-01T00:23:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:24Z[UTC], close time - 2023-01-01T00:24:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:25Z[UTC], close time - 2023-01-01T00:25:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:26Z[UTC], close time - 2023-01-01T00:26:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:27Z[UTC], close time - 2023-01-01T00:27:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:28Z[UTC], close time - 2023-01-01T00:28:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:29Z[UTC], close time - 2023-01-01T00:29:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:30Z[UTC], close time - 2023-01-01T00:30:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:31Z[UTC], close time - 2023-01-01T00:31:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:32Z[UTC], close time - 2023-01-01T00:32:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:33Z[UTC], close time - 2023-01-01T00:33:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:34Z[UTC], close time - 2023-01-01T00:34:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:35Z[UTC], close time - 2023-01-01T00:35:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:36Z[UTC], close time - 2023-01-01T00:36:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:37Z[UTC], close time - 2023-01-01T00:37:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:38Z[UTC], close time - 2023-01-01T00:38:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:39Z[UTC], close time - 2023-01-01T00:39:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:40Z[UTC], close time - 2023-01-01T00:40:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:41Z[UTC], close time - 2023-01-01T00:41:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:42Z[UTC], close time - 2023-01-01T00:42:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:43Z[UTC], close time - 2023-01-01T00:43:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:44Z[UTC], close time - 2023-01-01T00:44:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:45Z[UTC], close time - 2023-01-01T00:45:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:46Z[UTC], close time - 2023-01-01T00:46:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:47Z[UTC], close time - 2023-01-01T00:47:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:48Z[UTC], close time - 2023-01-01T00:48:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:49Z[UTC], close time - 2023-01-01T00:49:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:50Z[UTC], close time - 2023-01-01T00:50:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:51Z[UTC], close time - 2023-01-01T00:51:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:52Z[UTC], close time - 2023-01-01T00:52:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:53Z[UTC], close time - 2023-01-01T00:53:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:54Z[UTC], close time - 2023-01-01T00:54:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:55Z[UTC], close time - 2023-01-01T00:55:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:56Z[UTC], close time - 2023-01-01T00:56:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:57Z[UTC], close time - 2023-01-01T00:57:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:58Z[UTC], close time - 2023-01-01T00:58:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:59Z[UTC], close time - 2023-01-01T00:59:59.999Z[UTC]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Retrieving candlestick data for symbol: BTCUSDT, startTime: 2023-01-01T00:00Z, endTime: 2023-01-01T00:05Z, interval: ONE_MINUTE
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Start date-time: 2023-01-01T00:00Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - End date-time: 2023-01-01T00:05Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Existing open times: [2023-01-01T00:02Z[UTC], 2023-01-01T00:00Z[UTC], 2023-01-01T00:01Z[UTC]]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:00Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:01Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:02Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:03Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:03Z, closeTime=2023-01-01T00:04Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:04Z
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:04Z, closeTime=2023-01-01T00:05Z]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Final list of missing candlesticks: [null, null]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1704067200000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1704067259999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25],CandlestickInterval ONE_MINUTE
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking existence of candlestick: symbol=BTCUSDT, openTime=2024-01-01T00:00Z[UTC], closeTime=2024-01-01T00:00:59.999Z[UTC], interval=ONE_MINUTE
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Exists: false
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - In saveCandlestickData - Candlestick Candlestick[openTime=1704067200000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1704067259999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25],CandlestickInterval ONE_MINUTE, symbolBTCUSDT
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saved new candlestick to database: CandlestickEntity{id=null, symbol='BTCUSDT', openTime=2024-01-01T00:00Z, closeTime=2024-01-01T00:00:59.999Z, open=0.1, close=0.2, high=0.3, low=0.1, volume=100.0, quoteAssetVolume=50.0, numberOfTrades=10, takerBuyBaseAssetVolume=50.0, takerBuyQuoteAssetVolume=25.0, interval='ONE_MINUTE'}
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1704067200000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1704067259999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25]
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1704067260000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1704067319999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25],CandlestickInterval ONE_MINUTE
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking existence of candlestick: symbol=BTCUSDT, openTime=2024-01-01T00:01Z[UTC], closeTime=2024-01-01T00:01:59.999Z[UTC], interval=ONE_MINUTE
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Exists: false
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - In saveCandlestickData - Candlestick Candlestick[openTime=1704067260000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1704067319999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25],CandlestickInterval ONE_MINUTE, symbolBTCUSDT
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saved new candlestick to database: CandlestickEntity{id=null, symbol='BTCUSDT', openTime=2024-01-01T00:01Z, closeTime=2024-01-01T00:01:59.999Z, open=0.1, close=0.2, high=0.3, low=0.1, volume=100.0, quoteAssetVolume=50.0, numberOfTrades=10, takerBuyBaseAssetVolume=50.0, takerBuyQuoteAssetVolume=25.0, interval='ONE_MINUTE'}
+2024-08-01 16:38:19 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1704067260000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1704067319999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25]
+2024-08-01 16:38:19 ERROR c.e.C.s.b.BinanceHistoricalDataService - Candlestick out of order: Candlestick[openTime=1672531200000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1672531258999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25]
+2024-08-01 16:38:19 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-01 16:38:19 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-01 16:38:19 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-01 16:45:32 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.CryptocurrencyMarketAnalysisSystem.service.binance.BinanceHistoricalDataServiceTest]: BinanceHistoricalDataServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-01 16:45:32 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.CryptocurrencyMarketAnalysisSystem.CryptocurrencyMarketAnalysisSystemApplication for test class com.example.CryptocurrencyMarketAnalysisSystem.service.binance.BinanceHistoricalDataServiceTest
+2024-08-01 16:45:32 INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-08-01 16:45:33 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-01 16:45:33 INFO  c.e.C.s.b.BinanceHistoricalDataServiceTest - Starting BinanceHistoricalDataServiceTest using Java 20.0.2 with PID 17344 (started by Vlad in C:\Users\Vlad\Projects\Cryptocurrency-Market-Analysis-System)
+2024-08-01 16:45:33 INFO  c.e.C.s.b.BinanceHistoricalDataServiceTest - The following 1 profile is active: "test"
+2024-08-01 16:45:35 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-01 16:45:35 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 206 ms. Found 1 JPA repository interface.
+2024-08-01 16:45:36 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-01 16:45:36 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-08-01 16:45:37 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-01 16:45:37 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-01 16:45:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-01 16:45:37 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4f82248f
+2024-08-01 16:45:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-01 16:45:37 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-01 16:45:38 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-01 16:45:38 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-01 16:45:39 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-01 16:45:40 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-01 16:45:42 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-08-01 16:45:43 INFO  c.e.C.s.b.BinanceHistoricalDataServiceTest - Started BinanceHistoricalDataServiceTest in 10.151 seconds (process running for 12.704)
+2024-08-01 16:45:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Start date-time: 2023-01-01T00:00Z[UTC]
+2024-08-01 16:45:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - End date-time: 2023-01-01T00:05Z[UTC]
+2024-08-01 16:45:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Existing open times: [2023-01-01T00:02Z[UTC], 2023-01-01T00:00Z[UTC], 2023-01-01T00:05Z[UTC], 2023-01-01T00:03Z[UTC], 2023-01-01T00:01Z[UTC], 2023-01-01T00:04Z[UTC]]
+2024-08-01 16:45:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:00Z[UTC]
+2024-08-01 16:45:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:01Z[UTC]
+2024-08-01 16:45:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:02Z[UTC]
+2024-08-01 16:45:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:03Z[UTC]
+2024-08-01 16:45:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:04Z[UTC]
+2024-08-01 16:45:44 INFO  c.e.C.s.b.BinanceHistoricalDataService - Final list of missing candlesticks: []
+2024-08-01 16:45:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetching candlesticks from API: symbol=BTCUSDT, interval=ONE_MINUTE, start=1672531320000, end=1672531800000
+2024-08-01 16:45:45 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetching missing candlesticks from 1672531320000 to 1672531800000
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlesticks fetched from API: 9
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531320000, closeTime=1672531379999
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531380000, closeTime=1672531439999
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531440000, closeTime=1672531499999
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531500000, closeTime=1672531559999
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531560000, closeTime=1672531619999
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531620000, closeTime=1672531679999
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531680000, closeTime=1672531739999
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531740000, closeTime=1672531799999
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlestick from API: openTime=1672531800000, closeTime=1672531859999
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Validating candlestick order for symbol=BTCUSDT, interval=ONE_MINUTE
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving candlesticks to database: symbol=BTCUSDT, interval=ONE_MINUTE
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531320000,open=16539.31000000,high=16541.17000000,low=16534.52000000,close=16536.43000000,volume=62.90197000,closeTime=1672531379999,quoteAssetVolume=1040248.39837130,numberOfTrades=1930,takerBuyBaseAssetVolume=20.73999000,takerBuyQuoteAssetVolume=343009.42850780],CandlestickInterval ONE_MINUTE
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531320000,open=16539.31000000,high=16541.17000000,low=16534.52000000,close=16536.43000000,volume=62.90197000,closeTime=1672531379999,quoteAssetVolume=1040248.39837130,numberOfTrades=1930,takerBuyBaseAssetVolume=20.73999000,takerBuyQuoteAssetVolume=343009.42850780]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531380000,open=16536.43000000,high=16537.28000000,low=16531.00000000,close=16533.65000000,volume=115.71894000,closeTime=1672531439999,quoteAssetVolume=1913267.61073800,numberOfTrades=2956,takerBuyBaseAssetVolume=49.40758000,takerBuyQuoteAssetVolume=816919.41683040],CandlestickInterval ONE_MINUTE
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531380000,open=16536.43000000,high=16537.28000000,low=16531.00000000,close=16533.65000000,volume=115.71894000,closeTime=1672531439999,quoteAssetVolume=1913267.61073800,numberOfTrades=2956,takerBuyBaseAssetVolume=49.40758000,takerBuyQuoteAssetVolume=816919.41683040]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531440000,open=16534.12000000,high=16536.08000000,low=16527.51000000,close=16535.38000000,volume=144.45369000,closeTime=1672531499999,quoteAssetVolume=2388080.63492980,numberOfTrades=3795,takerBuyBaseAssetVolume=76.52421000,takerBuyQuoteAssetVolume=1265079.72183150],CandlestickInterval ONE_MINUTE
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531440000,open=16534.12000000,high=16536.08000000,low=16527.51000000,close=16535.38000000,volume=144.45369000,closeTime=1672531499999,quoteAssetVolume=2388080.63492980,numberOfTrades=3795,takerBuyBaseAssetVolume=76.52421000,takerBuyQuoteAssetVolume=1265079.72183150]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531500000,open=16534.91000000,high=16537.80000000,low=16533.94000000,close=16536.70000000,volume=53.58957000,closeTime=1672531559999,quoteAssetVolume=886140.95771700,numberOfTrades=2130,takerBuyBaseAssetVolume=30.89856000,takerBuyQuoteAssetVolume=510933.48631140],CandlestickInterval ONE_MINUTE
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531500000,open=16534.91000000,high=16537.80000000,low=16533.94000000,close=16536.70000000,volume=53.58957000,closeTime=1672531559999,quoteAssetVolume=886140.95771700,numberOfTrades=2130,takerBuyBaseAssetVolume=30.89856000,takerBuyQuoteAssetVolume=510933.48631140]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531560000,open=16536.76000000,high=16540.43000000,low=16534.20000000,close=16535.91000000,volume=96.45571000,closeTime=1672531619999,quoteAssetVolume=1595134.09750950,numberOfTrades=2348,takerBuyBaseAssetVolume=42.82683000,takerBuyQuoteAssetVolume=708257.82051220],CandlestickInterval ONE_MINUTE
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531560000,open=16536.76000000,high=16540.43000000,low=16534.20000000,close=16535.91000000,volume=96.45571000,closeTime=1672531619999,quoteAssetVolume=1595134.09750950,numberOfTrades=2348,takerBuyBaseAssetVolume=42.82683000,takerBuyQuoteAssetVolume=708257.82051220]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531620000,open=16535.91000000,high=16539.69000000,low=16533.95000000,close=16534.67000000,volume=56.72010000,closeTime=1672531679999,quoteAssetVolume=937969.84484200,numberOfTrades=2159,takerBuyBaseAssetVolume=27.87678000,takerBuyQuoteAssetVolume=461005.00590840],CandlestickInterval ONE_MINUTE
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531620000,open=16535.91000000,high=16539.69000000,low=16533.95000000,close=16534.67000000,volume=56.72010000,closeTime=1672531679999,quoteAssetVolume=937969.84484200,numberOfTrades=2159,takerBuyBaseAssetVolume=27.87678000,takerBuyQuoteAssetVolume=461005.00590840]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531680000,open=16533.98000000,high=16534.79000000,low=16528.00000000,close=16529.28000000,volume=95.13552000,closeTime=1672531739999,quoteAssetVolume=1572652.32586340,numberOfTrades=2619,takerBuyBaseAssetVolume=48.51311000,takerBuyQuoteAssetVolume=801937.09233730],CandlestickInterval ONE_MINUTE
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531680000,open=16533.98000000,high=16534.79000000,low=16528.00000000,close=16529.28000000,volume=95.13552000,closeTime=1672531739999,quoteAssetVolume=1572652.32586340,numberOfTrades=2619,takerBuyBaseAssetVolume=48.51311000,takerBuyQuoteAssetVolume=801937.09233730]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531740000,open=16529.28000000,high=16529.52000000,low=16522.55000000,close=16526.67000000,volume=89.28953000,closeTime=1672531799999,quoteAssetVolume=1475565.20839320,numberOfTrades=2688,takerBuyBaseAssetVolume=39.49913000,takerBuyQuoteAssetVolume=652745.81228570],CandlestickInterval ONE_MINUTE
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531740000,open=16529.28000000,high=16529.52000000,low=16522.55000000,close=16526.67000000,volume=89.28953000,closeTime=1672531799999,quoteAssetVolume=1475565.20839320,numberOfTrades=2688,takerBuyBaseAssetVolume=39.49913000,takerBuyQuoteAssetVolume=652745.81228570]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1672531800000,open=16526.67000000,high=16530.87000000,low=16522.55000000,close=16525.34000000,volume=96.60421000,closeTime=1672531859999,quoteAssetVolume=1596529.14203180,numberOfTrades=3285,takerBuyBaseAssetVolume=42.77134000,takerBuyQuoteAssetVolume=706865.43078800],CandlestickInterval ONE_MINUTE
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1672531800000,open=16526.67000000,high=16530.87000000,low=16522.55000000,close=16525.34000000,volume=96.60421000,closeTime=1672531859999,quoteAssetVolume=1596529.14203180,numberOfTrades=3285,takerBuyBaseAssetVolume=42.77134000,takerBuyQuoteAssetVolume=706865.43078800]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Updating candlestick set: symbol=BTCUSDT, startDateTime=2023-01-01T00:00Z, endDateTime=2023-01-01T00:10Z, interval=ONE_MINUTE
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - updateCandlestickSet called with params: symbol=BTCUSDT, startDateTime=2023-01-01T00:00Z, endDateTime=2023-01-01T00:10Z, interval=ONE_MINUTE, allCandlesticksSet=[]
+2024-08-01 16:45:46 WARN  c.e.C.s.b.BinanceHistoricalDataService - No progress in fetching missing candlesticks, breaking out of the loop
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Waiting for 13388 milliseconds until the next minute
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - start 2023-01-01T00:00Z and end 2023-01-01T00:02:30Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - startTimeMillis 1672531200000 and endTimeMillis 1672531350000
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - candlestickList: [Candlestick[openTime=1672531200000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531260000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531260000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531320000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531320000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531380000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531380000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531440000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531440000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531500000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - candlestickSet: [CandlestickWrapper[candlestick=Candlestick[openTime=1672531320000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531380000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]], CandlestickWrapper[candlestick=Candlestick[openTime=1672531260000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531320000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]], CandlestickWrapper[candlestick=Candlestick[openTime=1672531440000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531500000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]], CandlestickWrapper[candlestick=Candlestick[openTime=1672531200000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531260000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]], CandlestickWrapper[candlestick=Candlestick[openTime=1672531380000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531440000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]]]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Retrieving candlestick data for symbol: BTCUSDT, startTime: 2023-01-01T00:00Z, endTime: 2023-01-01T01:00Z, interval: ONE_MINUTE
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - fetchExistingCandlesticks symbol: BTCUSDT, startDateTime: 2023-01-01T00:00Z, endDateTime: 2023-01-01T01:00Z, interval: ONE_MINUTE
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Fetched candlesticks by fetchExistingCandlesticks: [Candlestick[openTime=1672531200000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531260000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531260000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531320000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531320000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531380000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531380000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531440000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0], Candlestick[openTime=1672531440000,open=100.0,high=105.0,low=95.0,close=105.0,volume=1000.0,closeTime=1672531500000,quoteAssetVolume=1000.0,numberOfTrades=10,takerBuyBaseAssetVolume=500.0,takerBuyQuoteAssetVolume=500.0]]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Start date-time: 2023-01-01T00:00Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - End date-time: 2023-01-01T01:00Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Existing open times: [2023-01-01T00:00Z[UTC], 2023-01-01T00:01Z[UTC]]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:00Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:01Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:02Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:02Z, closeTime=2023-01-01T00:03Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:03Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:03Z, closeTime=2023-01-01T00:04Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:04Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:04Z, closeTime=2023-01-01T00:05Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:05Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:05Z, closeTime=2023-01-01T00:06Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:06Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:06Z, closeTime=2023-01-01T00:07Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:07Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:07Z, closeTime=2023-01-01T00:08Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:08Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:08Z, closeTime=2023-01-01T00:09Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:09Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:09Z, closeTime=2023-01-01T00:10Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:10Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:10Z, closeTime=2023-01-01T00:11Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:11Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:11Z, closeTime=2023-01-01T00:12Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:12Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:12Z, closeTime=2023-01-01T00:13Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:13Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:13Z, closeTime=2023-01-01T00:14Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:14Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:14Z, closeTime=2023-01-01T00:15Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:15Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:15Z, closeTime=2023-01-01T00:16Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:16Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:16Z, closeTime=2023-01-01T00:17Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:17Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:17Z, closeTime=2023-01-01T00:18Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:18Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:18Z, closeTime=2023-01-01T00:19Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:19Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:19Z, closeTime=2023-01-01T00:20Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:20Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:20Z, closeTime=2023-01-01T00:21Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:21Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:21Z, closeTime=2023-01-01T00:22Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:22Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:22Z, closeTime=2023-01-01T00:23Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:23Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:23Z, closeTime=2023-01-01T00:24Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:24Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:24Z, closeTime=2023-01-01T00:25Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:25Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:25Z, closeTime=2023-01-01T00:26Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:26Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:26Z, closeTime=2023-01-01T00:27Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:27Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:27Z, closeTime=2023-01-01T00:28Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:28Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:28Z, closeTime=2023-01-01T00:29Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:29Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:29Z, closeTime=2023-01-01T00:30Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:30Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:30Z, closeTime=2023-01-01T00:31Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:31Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:31Z, closeTime=2023-01-01T00:32Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:32Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:32Z, closeTime=2023-01-01T00:33Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:33Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:33Z, closeTime=2023-01-01T00:34Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:34Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:34Z, closeTime=2023-01-01T00:35Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:35Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:35Z, closeTime=2023-01-01T00:36Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:36Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:36Z, closeTime=2023-01-01T00:37Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:37Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:37Z, closeTime=2023-01-01T00:38Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:38Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:38Z, closeTime=2023-01-01T00:39Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:39Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:39Z, closeTime=2023-01-01T00:40Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:40Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:40Z, closeTime=2023-01-01T00:41Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:41Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:41Z, closeTime=2023-01-01T00:42Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:42Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:42Z, closeTime=2023-01-01T00:43Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:43Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:43Z, closeTime=2023-01-01T00:44Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:44Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:44Z, closeTime=2023-01-01T00:45Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:45Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:45Z, closeTime=2023-01-01T00:46Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:46Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:46Z, closeTime=2023-01-01T00:47Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:47Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:47Z, closeTime=2023-01-01T00:48Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:48Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:48Z, closeTime=2023-01-01T00:49Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:49Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:49Z, closeTime=2023-01-01T00:50Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:50Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:50Z, closeTime=2023-01-01T00:51Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:51Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:51Z, closeTime=2023-01-01T00:52Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:52Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:52Z, closeTime=2023-01-01T00:53Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:53Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:53Z, closeTime=2023-01-01T00:54Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:54Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:54Z, closeTime=2023-01-01T00:55Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:55Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:55Z, closeTime=2023-01-01T00:56Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:56Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:56Z, closeTime=2023-01-01T00:57Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:57Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:57Z, closeTime=2023-01-01T00:58Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:58Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:58Z, closeTime=2023-01-01T00:59Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:59Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:59Z, closeTime=2023-01-01T01:00Z]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Final list of missing candlesticks: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:02Z[UTC], close time - 2023-01-01T00:02:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:03Z[UTC], close time - 2023-01-01T00:03:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:04Z[UTC], close time - 2023-01-01T00:04:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:05Z[UTC], close time - 2023-01-01T00:05:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:06Z[UTC], close time - 2023-01-01T00:06:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:07Z[UTC], close time - 2023-01-01T00:07:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:08Z[UTC], close time - 2023-01-01T00:08:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:09Z[UTC], close time - 2023-01-01T00:09:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:10Z[UTC], close time - 2023-01-01T00:10:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:11Z[UTC], close time - 2023-01-01T00:11:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:12Z[UTC], close time - 2023-01-01T00:12:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:13Z[UTC], close time - 2023-01-01T00:13:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:14Z[UTC], close time - 2023-01-01T00:14:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:15Z[UTC], close time - 2023-01-01T00:15:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:16Z[UTC], close time - 2023-01-01T00:16:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:17Z[UTC], close time - 2023-01-01T00:17:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:18Z[UTC], close time - 2023-01-01T00:18:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:19Z[UTC], close time - 2023-01-01T00:19:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:20Z[UTC], close time - 2023-01-01T00:20:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:21Z[UTC], close time - 2023-01-01T00:21:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:22Z[UTC], close time - 2023-01-01T00:22:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:23Z[UTC], close time - 2023-01-01T00:23:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:24Z[UTC], close time - 2023-01-01T00:24:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:25Z[UTC], close time - 2023-01-01T00:25:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:26Z[UTC], close time - 2023-01-01T00:26:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:27Z[UTC], close time - 2023-01-01T00:27:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:28Z[UTC], close time - 2023-01-01T00:28:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:29Z[UTC], close time - 2023-01-01T00:29:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:30Z[UTC], close time - 2023-01-01T00:30:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:31Z[UTC], close time - 2023-01-01T00:31:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:32Z[UTC], close time - 2023-01-01T00:32:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:33Z[UTC], close time - 2023-01-01T00:33:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:34Z[UTC], close time - 2023-01-01T00:34:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:35Z[UTC], close time - 2023-01-01T00:35:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:36Z[UTC], close time - 2023-01-01T00:36:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:37Z[UTC], close time - 2023-01-01T00:37:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:38Z[UTC], close time - 2023-01-01T00:38:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:39Z[UTC], close time - 2023-01-01T00:39:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:40Z[UTC], close time - 2023-01-01T00:40:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:41Z[UTC], close time - 2023-01-01T00:41:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:42Z[UTC], close time - 2023-01-01T00:42:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:43Z[UTC], close time - 2023-01-01T00:43:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:44Z[UTC], close time - 2023-01-01T00:44:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:45Z[UTC], close time - 2023-01-01T00:45:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:46Z[UTC], close time - 2023-01-01T00:46:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:47Z[UTC], close time - 2023-01-01T00:47:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:48Z[UTC], close time - 2023-01-01T00:48:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:49Z[UTC], close time - 2023-01-01T00:49:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:50Z[UTC], close time - 2023-01-01T00:50:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:51Z[UTC], close time - 2023-01-01T00:51:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:52Z[UTC], close time - 2023-01-01T00:52:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:53Z[UTC], close time - 2023-01-01T00:53:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:54Z[UTC], close time - 2023-01-01T00:54:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:55Z[UTC], close time - 2023-01-01T00:55:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:56Z[UTC], close time - 2023-01-01T00:56:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:57Z[UTC], close time - 2023-01-01T00:57:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:58Z[UTC], close time - 2023-01-01T00:58:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick: open time - 2023-01-01T00:59Z[UTC], close time - 2023-01-01T00:59:59.999Z[UTC]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Retrieving candlestick data for symbol: BTCUSDT, startTime: 2023-01-01T00:00Z, endTime: 2023-01-01T00:05Z, interval: ONE_MINUTE
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Start date-time: 2023-01-01T00:00Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - End date-time: 2023-01-01T00:05Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Existing open times: [2023-01-01T00:02Z[UTC], 2023-01-01T00:00Z[UTC], 2023-01-01T00:01Z[UTC]]
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:00Z
+2024-08-01 16:45:46 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:01Z
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:02Z
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:03Z
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:03Z, closeTime=2023-01-01T00:04Z]
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - Current date-time: 2023-01-01T00:04Z
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - Missing candlestick added: Candlestick[openTime=2023-01-01T00:04Z, closeTime=2023-01-01T00:05Z]
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - Final list of missing candlesticks: [null, null]
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1704067200000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1704067259999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25],CandlestickInterval ONE_MINUTE
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking existence of candlestick: symbol=BTCUSDT, openTime=2024-01-01T00:00Z[UTC], closeTime=2024-01-01T00:00:59.999Z[UTC], interval=ONE_MINUTE
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - Exists: false
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - In saveCandlestickData - Candlestick Candlestick[openTime=1704067200000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1704067259999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25],CandlestickInterval ONE_MINUTE, symbolBTCUSDT
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saved new candlestick to database: CandlestickEntity{id=null, symbol='BTCUSDT', openTime=2024-01-01T00:00Z, closeTime=2024-01-01T00:00:59.999Z, open=0.1, close=0.2, high=0.3, low=0.1, volume=100.0, quoteAssetVolume=50.0, numberOfTrades=10, takerBuyBaseAssetVolume=50.0, takerBuyQuoteAssetVolume=25.0, interval='ONE_MINUTE'}
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1704067200000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1704067259999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25]
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - Candlestick to be processed: Candlestick[openTime=1704067260000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1704067319999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25],CandlestickInterval ONE_MINUTE
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking existence of candlestick: symbol=BTCUSDT, openTime=2024-01-01T00:01Z[UTC], closeTime=2024-01-01T00:01:59.999Z[UTC], interval=ONE_MINUTE
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - Exists: false
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - Checking if candlestick exists: false
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - In saveCandlestickData - Candlestick Candlestick[openTime=1704067260000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1704067319999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25],CandlestickInterval ONE_MINUTE, symbolBTCUSDT
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saved new candlestick to database: CandlestickEntity{id=null, symbol='BTCUSDT', openTime=2024-01-01T00:01Z, closeTime=2024-01-01T00:01:59.999Z, open=0.1, close=0.2, high=0.3, low=0.1, volume=100.0, quoteAssetVolume=50.0, numberOfTrades=10, takerBuyBaseAssetVolume=50.0, takerBuyQuoteAssetVolume=25.0, interval='ONE_MINUTE'}
+2024-08-01 16:45:47 INFO  c.e.C.s.b.BinanceHistoricalDataService - Saving new candlestick to database: Candlestick[openTime=1704067260000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1704067319999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25]
+2024-08-01 16:45:47 ERROR c.e.C.s.b.BinanceHistoricalDataService - Candlestick out of order: Candlestick[openTime=1672531200000,open=0.1,high=0.3,low=0.1,close=0.2,volume=100,closeTime=1672531258999,quoteAssetVolume=50,numberOfTrades=10,takerBuyBaseAssetVolume=50,takerBuyQuoteAssetVolume=25]
+2024-08-01 16:45:47 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-01 16:45:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-01 16:45:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
