@@ -1,8 +1,8 @@
-package com.example.MarkPriceController;
+package com.example.CryptocurrencyMarketAnalysisSystem;
 
-import com.example.MarkPriceController.service.BinanceHistoricalDataService;
-import com.example.MarkPriceController.service.BinancePriceService;
-import com.example.MarkPriceController.service.CandlestickDataService;
+import com.example.CryptocurrencyMarketAnalysisSystem.service.binance.BinanceHistoricalDataService;
+import com.example.CryptocurrencyMarketAnalysisSystem.service.BinancePriceService;
+import com.example.CryptocurrencyMarketAnalysisSystem.service.CandlestickDataService;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,11 +19,11 @@ import java.util.logging.Logger;
 
 @SpringBootApplication
 @EnableScheduling
-public class MarkPriceControllerApplication {
-	private static final Logger logger = Logger.getLogger(MarkPriceControllerApplication.class.getName());
+public class CryptocurrencyMarketAnalysisSystemApplication {
+	private static final Logger logger = Logger.getLogger(CryptocurrencyMarketAnalysisSystemApplication.class.getName());
 
 	public static void main(String[] args) {
-		SpringApplication.run(MarkPriceControllerApplication.class, args);
+		SpringApplication.run(CryptocurrencyMarketAnalysisSystemApplication.class, args);
 		// Open browser window with index.html page
 		openBrowser("http://localhost:8085/");
 	}

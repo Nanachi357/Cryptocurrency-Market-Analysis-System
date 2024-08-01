@@ -35,7 +35,7 @@ cd MarkPriceController
 For development, use the docker-compose.dev.yml file:
 
 ```sh
-docker-compose -f docker-compose.dev.yml up --build
+docker-compose -f docker-compose.yml up --build
 ```
 
 This will start the application and the PostgreSQL database. The application will be accessible at http://localhost:8085.
@@ -57,7 +57,7 @@ To stop the application and remove containers:
 #### Development Environment
 
 ```sh
-docker-compose -f docker-compose.dev.yml down
+docker-compose -f docker-compose.yml down
 ```
 #### Production Environment
 
@@ -75,7 +75,7 @@ To restart the application:
 
 #### Development Environment
 ```sh
-docker-compose -f docker-compose.dev.yml restart
+docker-compose -f docker-compose.yml restart
 ```
 
 #### Production Environment

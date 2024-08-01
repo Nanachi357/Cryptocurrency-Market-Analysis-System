@@ -1,9 +1,11 @@
-package com.example.MarkPriceController.service;
+package com.example.CryptocurrencyMarketAnalysisSystem.service;
 
 import com.binance.api.client.domain.market.Candlestick;
-import com.example.MarkPriceController.model.RSIData;
-import com.example.MarkPriceController.util.CandlestickWrapper;
-import com.example.MarkPriceController.util.DateUtils;
+import com.binance.api.client.domain.market.CandlestickInterval;
+import com.example.CryptocurrencyMarketAnalysisSystem.model.RSIData;
+import com.example.CryptocurrencyMarketAnalysisSystem.service.binance.BinanceHistoricalDataService;
+import com.example.CryptocurrencyMarketAnalysisSystem.util.CandlestickWrapper;
+import com.example.CryptocurrencyMarketAnalysisSystem.util.DateUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -18,9 +20,9 @@ public class RSIService {
     }
 
     //Retrieves and calculates RSI data for a given symbol, interval, date range, and period
-    public RSIData getRSIData(String symbol, String interval, long startDate, long endDate, int period) {
+    public RSIData getRSIData(String symbol, CandlestickInterval interval, long startDate, long endDate, int period) {
         // Fetch historical candlestick data
-        List<Candlestick> candlesticks = binanceHistoricalDataService.getHistoricalCandlestickData(symbol, interval.toUpperCase(), startDate, endDate);
+        List<Candlestick> candlesticks = binanceHistoricalDataService.getHistoricalCandlestickData(symbol, interval, startDate, endDate);
 
 
         if (candlesticks.size() < period) {
@@ -40,7 +42,6 @@ public class RSIService {
             CandlestickWrapper wrapper = new CandlestickWrapper(candlestick);
             if (uniqueCloseTimes.add(wrapper)) {
                 closePrices.add(Double.parseDouble(candlestick.getClose()));
-
                 dates.add(DateUtils.convertMillisToDate(candlestick.getCloseTime()));
             }
         }
@@ -49,12 +50,7 @@ public class RSIService {
         // Calculate RSI values
         List<Double> rsiValues = calculateRSI(closePrices, period);
 
-        // Prepare RSIData object
-        RSIData rsiData = new RSIData();
-        rsiData.setDates(dates);
-        rsiData.setRsiValues(rsiValues);
-
-        return rsiData;
+        return new RSIData(dates, rsiValues);
     }
 
 

@@ -1,10 +1,10 @@
-package com.example.MarkPriceController;
+package com.example.CryptocurrencyMarketAnalysisSystem;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MarkPriceControllerApplicationTests {
+class CryptocurrencyMarketAnalysisSystemApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,7 +1,7 @@
-package com.example.MarkPriceController.controller;
+package com.example.CryptocurrencyMarketAnalysisSystem.controller;
 
 import com.binance.api.client.domain.market.OrderBook;
-import com.example.MarkPriceController.service.OrderBookService;
+import com.example.CryptocurrencyMarketAnalysisSystem.service.OrderBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

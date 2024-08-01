@@ -1,4 +1,4 @@
-package com.example.MarkPriceController.controller;
+package com.example.CryptocurrencyMarketAnalysisSystem.controller;
 
 import com.binance.api.client.domain.market.CandlestickInterval;
 import org.springframework.stereotype.Controller;

@@ -10,6 +10,12 @@ COPY . /app
 # Check if the file is copied correctly
 RUN ls -la /app
 
+# Create a directory for logs
+RUN mkdir -p /var/log/myapp
+
+# Set an environment variable for the log file path
+ENV LOG_FILE_PATH=/var/log/myapp/app.log
+
 # Expose the port the application runs on
 EXPOSE 8085
 

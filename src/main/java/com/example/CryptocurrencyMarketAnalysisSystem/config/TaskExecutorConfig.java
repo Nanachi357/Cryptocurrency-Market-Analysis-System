@@ -1,4 +1,4 @@
-package com.example.MarkPriceController.config;
+package com.example.CryptocurrencyMarketAnalysisSystem.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

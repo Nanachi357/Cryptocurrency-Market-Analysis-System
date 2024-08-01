@@ -1,11 +1,15 @@
-package com.example.MarkPriceController.util;
+package com.example.CryptocurrencyMarketAnalysisSystem.util;
 
 import com.binance.api.client.domain.market.Candlestick;
 
 import java.util.Objects;
 
 public record CandlestickWrapper(Candlestick candlestick) {
-
+    public CandlestickWrapper {
+        if (candlestick == null) {
+            throw new NullPointerException("Candlestick must not be null");
+        }
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -30,4 +34,8 @@ public record CandlestickWrapper(Candlestick candlestick) {
                 candlestick.getHigh(), candlestick.getLow(), candlestick.getVolume(), candlestick.getQuoteAssetVolume(),
                 candlestick.getNumberOfTrades(), candlestick.getTakerBuyBaseAssetVolume(), candlestick.getTakerBuyQuoteAssetVolume());
     }
+    public Candlestick getCandlestick() {
+        return candlestick;
+    }
+
 }

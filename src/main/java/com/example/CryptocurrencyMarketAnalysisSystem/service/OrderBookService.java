@@ -1,4 +1,4 @@
-package com.example.MarkPriceController.service;
+package com.example.CryptocurrencyMarketAnalysisSystem.service;
 
 import com.binance.api.client.BinanceApiClientFactory;
 import com.binance.api.client.BinanceApiRestClient;
